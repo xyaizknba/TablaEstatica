@@ -1,0 +1,282 @@
+<html><head><title>Tablas Estaticas</title>
+<style>
+.BotCarga {background-color:white;font-size:x-large;color:blue}
+.LnlEjem {background-color:white;font-size:x-large}
+.Info{background-color:white;font-size:x-large;border-color:red;border-style:dotted;border-width:3px}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v1/ar.js"></script><script>
+var iNumeroMenus=10,iNumeroSubMenus=5,blnVerUrl=false, blnVerFunParam=false;
+if(Ar82("vFunParam").length>0){blnVerFunParam=true;}
+if(Ar82("iMenus").length > 0 && Ar82("iSubMenus").length > 0){ iNumeroMenus=Ar83("iMenus"),iNumeroSubMenus=Ar83("iSubMenus");} else { iNumeroMenus=Number(window.prompt("Numero Maximo de Menus:","10")) ,iNumeroSubMenus=Number(window.prompt("Numero Maximo de Sub-Menus:","5")); alert("Mejor Pasalos por URL\n?iMenus=3&iSubMenus=4"); blnVerUrl=true;}
+//////////////////////////////
+function EtiquetaSubMenu(iMnu){document.getElementById(("txtMnu"+iMnu)).value=Ar50(document.getElementById(("txtMnu"+iMnu)).value);}
+//////////////////////////////
+function NombreArchivo(iMnu,iSubMnu){document.getElementById(("txtArc"+iSubMnu+"Mnu"+iMnu)).value=Ar37(document.getElementById(("txtSub"+iSubMnu+"Mnu"+iMnu)).value)+document.getElementById("extArc").value;}
+////////////////////////////
+function cmdGenerar_onClick(){
+ var sCod="<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<Estaticas>\n <Menu><Descripcion>"+(document.getElementById("txtInicio").value.length > 0 ? document.getElementById("txtInicio").value : "Inicio" )+"</Descripcion></Menu>\n";
+ for(var iMnu=1;iMnu<=iNumeroMenus;iMnu++){if(document.getElementById(("txtMnu"+iMnu)).value.length>0){sCod+=" <Menu><Descripcion>"+document.getElementById(("txtMnu"+iMnu)).value+"</Descripcion></Menu>\n";}}
+ for(var iMenu=1;iMenu<=iNumeroMenus;iMenu++){ 
+  if(Ar506("txtMnu"+iMenu) && document.getElementById(("txtMnu"+iMenu)).value.length>0){ sCod+="\n\n<DataTable>\n"; }
+  for(var iSumMenu=1;iSumMenu<=iNumeroSubMenus;iSumMenu++){sCod+=AgregarTabla(iMenu,iSumMenu);}
+  if(Ar506("txtMnu"+iMenu) && document.getElementById(("txtMnu"+iMenu)).value.length>0){ sCod+="</DataTable>\n\n"; }
+ }
+ sCod+="</Estaticas>\n";Ar200("txtCodigo",sCod);
+ Seleccionar();
+}
+/////////////////////////////
+function EstNumCam(iMnu,iSubMnu){
+ var sNumCam="",iNumeroCampos=ValorNumerico(("txtNum"+iSubMnu+"Mnu"+iMnu));
+ var sAli=Ar5("1,", iNumeroCampos);sAli=sAli.substring(0,sAli.length-1);
+ Ar200(("txtAli"+iSubMnu+"Mnu"+iMnu),sAli);Ar200(("txtFmt"+iSubMnu+"Mnu"+iMnu),sAli);Ar200(("txtPara"+iSubMnu+"Mnu"+iMnu),sAli);
+ for(var i=1;i<=iNumeroCampos;i++){sNumCam+="Campo"+i+"@@";}
+ sNumCam = sNumCam.substring(0,sNumCam.length-2);
+ Ar200(("txtLbl"+iSubMnu+"Mnu"+iMnu),sNumCam);
+}
+//////////////////////////
+function AgregarTabla(iMnu,iSubMnu){
+ var sTbl="",sSQL=document.getElementById(("txtSql"+iSubMnu+"Mnu"+iMnu)).value,
+  sNombreArc=document.getElementById(("txtArc"+iSubMnu+"Mnu"+iMnu)).value,
+  sNumCa=document.getElementById(("txtNum"+iSubMnu+"Mnu"+iMnu)).value;
+ if( document.getElementById(("txtSub"+iSubMnu+"Mnu"+iMnu)).value.length > 0 && (sSQL.length>0 && sNombreArc.length>0 && sNumCa.length>0 )){
+   sTbl+=" <Tabla>\n";
+   sTbl+="  <Sql>"+sSQL+"</Sql>\n";
+   sTbl+="  <TituloHtm>"+document.getElementById(("txtSub"+iSubMnu+"Mnu"+iMnu)).value+"</TituloHtm>\n";   
+   sTbl+="  <EtiquetaCampos>"+document.getElementById(("txtLbl"+iSubMnu+"Mnu"+iMnu)).value+"</EtiquetaCampos>\n";
+   sTbl+="  <FormatoRegistro>"+document.getElementById(("txtFmt"+iSubMnu+"Mnu"+iMnu)).value+"</FormatoRegistro>\n";
+   sTbl+="  <ParametrosFormato>"+document.getElementById(("txtPara"+iSubMnu+"Mnu"+iMnu)).value+"</ParametrosFormato>\n";
+   sTbl+="  <AlineacionDatos>"+document.getElementById(("txtAli"+iSubMnu+"Mnu"+iMnu)).value+"</AlineacionDatos>\n";
+   sTbl+="  <Parrafo1>"+document.getElementById(("txtP1_"+iSubMnu+"Mnu"+iMnu)).value+"</Parrafo1>\n";   
+   sTbl+="  <Parrafo2>"+document.getElementById(("txtP2_"+iSubMnu+"Mnu"+iMnu)).value+"</Parrafo2>\n";
+   sTbl+="  <NombreArchivo>"+sNombreArc+"</NombreArchivo>\n";      
+   sTbl+=" </Tabla>\n\n";            
+ }
+ return sTbl;
+}
+///////////////////
+function Seleccionar(){document.frm.txtCodigo.select(); document.execCommand("copy");}
+///////////////////
+function CargarEjemplo(){
+ Ar200("txtInicio","Inicio");
+ Ar200("txtMnu1","Persona"); //Texto Menu 1
+ 
+   Ar200("txtSub1Mnu1","Personas");
+   Ar200("txtArc1Mnu1","persona.htm");
+   Ar200("txtNum1Mnu1","10");
+   Ar200("txtSql1Mnu1","SELECT persona.nombre, persona.clave, persona.correo, persona.telefono, persona.comentario,  CASE WHEN CHAR_LENGTH(TRIM(CAST(persona.soltero AS CHAR)))>0 THEN CASE WHEN soltero = 0 THEN 'No' ELSE 'Si' END ELSE '' END AS soltero,  ciudad.ciudad AS ciudad,  IFNULL(DATE_FORMAT(persona.fecha_pago,'%d-%m-%Y'),'') AS fecha_pago, deporte.deporte AS deporte, persona.fecha_contratacion FROM persona LEFT JOIN ciudad ON ciudad.id_ciudad = persona.id_ciudad LEFT JOIN deporte ON deporte.id_deporte = persona.id_deporte");
+   Ar200("txtLbl1Mnu1","Nombre@@Clave@@Correo@@Telefono@@Comentario@@Soltero@@Ciudad@@Fecha Pago@@Deporte@@Fecha Contratacion");
+   Ar200("txtAli1Mnu1","1,1,1,1,1,2,1,1,1,1");
+   Ar200("txtFmt1Mnu1","1,1,1,1,1,1,1,1,1,1");
+   Ar200("txtPara1Mnu1","1,1,1,1,1,1,1,1,1,1");
+   Ar200("txtP1_1Mnu1","Lista de Personas");
+   Ar200("txtP2_1Mnu1","Personas Detalles");
+
+   Ar200("txtSub2Mnu1","Contacto");
+   Ar200("txtArc2Mnu1","contacto.htm");
+   Ar200("txtNum2Mnu1","3");
+   Ar200("txtSql2Mnu1","SELECT persona.nombre, persona.correo, persona.telefono FROM persona");
+   Ar200("txtLbl2Mnu1","Nombre@@Correo Electronico@@Telefono Celular");
+   Ar200("txtAli2Mnu1","1,2,2");
+   Ar200("txtFmt2Mnu1","1,1,1");
+   Ar200("txtPara2Mnu1","1,1,1");
+   Ar200("txtP1_2Mnu1","Contacto Usuarios del Sistema");
+   Ar200("txtP2_2Mnu1","Contacto");
+
+   Ar200("txtSub3Mnu1","Deporte Practicado");
+   Ar200("txtArc3Mnu1","deporte_practicado.htm");
+   Ar200("txtNum3Mnu1","4");
+   Ar200("txtSql3Mnu1","SELECT persona.nombre, persona.comentario,  ciudad.ciudad AS ciudad, deporte.deporte AS deporte FROM persona LEFT JOIN ciudad ON ciudad.id_ciudad = persona.id_ciudad LEFT JOIN deporte ON deporte.id_deporte = persona.id_deporte");
+   Ar200("txtLbl3Mnu1","Nombre@@Comentario@@Ciudad de Origen@@Deporte Practicado");
+   Ar200("txtAli3Mnu1","1,1,1,2");
+   Ar200("txtFmt3Mnu1","1,1,1,1");
+   Ar200("txtPara3Mnu1","1,1,1,1");
+   Ar200("txtP1_3Mnu1","Deporte Practicado");
+   Ar200("txtP2_3Mnu1","Deporte Practicado y Ciudad de Origen");
+
+   Ar200("txtSub4Mnu1","Persona Soltera");
+   Ar200("txtArc4Mnu1","persona_soltera.htm");
+   Ar200("txtNum4Mnu1","2");
+   Ar200("txtSql4Mnu1","SELECT persona.nombre, CASE WHEN CHAR_LENGTH(TRIM(CAST(persona.soltero AS CHAR)))>0 THEN CASE WHEN soltero = 0 THEN 'No' ELSE 'Si' END ELSE '' END AS soltero FROM persona");
+   Ar200("txtLbl4Mnu1","Nombre@@Soltero");
+   Ar200("txtAli4Mnu1","1,1");
+   Ar200("txtFmt4Mnu1","1,1");
+   Ar200("txtPara4Mnu1","1,1");
+   Ar200("txtP1_4Mnu1","");
+   Ar200("txtP2_4Mnu1","");
+
+ Ar200("txtMnu2","Empresa"); //Texto Menu 2
+ 
+   Ar200("txtSub1Mnu2","Empresa");
+   Ar200("txtArc1Mnu2","empresa.htm");
+   Ar200("txtNum1Mnu2","4");
+   Ar200("txtSql1Mnu2","SELECT empresa.empresa, giro.giro AS giro, ciudad.ciudad AS ciudad, empresa.razon_social FROM empresa LEFT JOIN giro ON giro.id_giro = empresa.id_giro LEFT JOIN ciudad ON ciudad.id_ciudad = empresa.id_ciudad");
+   Ar200("txtLbl1Mnu2","Empresa@@Giro@@Ciudad@@Razon Social");
+   Ar200("txtAli1Mnu2","1,1,1,1");
+   Ar200("txtFmt1Mnu2","1,1,1,1");
+   Ar200("txtPara1Mnu2","1,1,1,1");
+   Ar200("txtP1_1Mnu2","Empresas Autorizadas");
+   Ar200("txtP2_1Mnu2","Listado de Empresas");
+
+   Ar200("txtSub2Mnu2","Empresa Ciudad");
+   Ar200("txtArc2Mnu2","empresa_ciudad.htm");
+   Ar200("txtNum2Mnu2","2");
+   Ar200("txtSql2Mnu2","SELECT empresa.empresa, ciudad.ciudad AS ciudad FROM empresa LEFT JOIN ciudad ON ciudad.id_ciudad = empresa.id_ciudad");
+   Ar200("txtLbl2Mnu2","Empresa@@Ciudad");
+   Ar200("txtAli2Mnu2","2,2");
+   Ar200("txtFmt2Mnu2","1,1");
+   Ar200("txtPara2Mnu2","1,1");
+   Ar200("txtP1_2Mnu2","Empresas Ubicacion");
+   Ar200("txtP2_2Mnu2","Listado de Empresas");
+  
+ Ar200("txtMnu3","Deporte"); //Texto Menu 3  
+  
+   Ar200("txtSub1Mnu3","Deporte");
+   Ar200("txtArc1Mnu3","deporte.htm");
+   Ar200("txtNum1Mnu3","2");
+   Ar200("txtSql1Mnu3","SELECT deporte.id_deporte, deporte.deporte FROM deporte");
+   Ar200("txtLbl1Mnu3","Folio Deporte@@Deporte");
+   Ar200("txtAli1Mnu3","2,2");
+   Ar200("txtFmt1Mnu3","1,1");
+   Ar200("txtPara1Mnu3","1,1");
+   Ar200("txtP1_1Mnu3","Listado de Deportes");
+   Ar200("txtP2_1Mnu3","Deportes disponibles en el Club");
+
+   Ar201("urlEjemplo","<a href=\"https://xyaizknba.github.io/TablaEstatica\" target=\"EstaticEjemp\">Ejemplo Datos Estaticos</a>");
+   Ar201("urlXml","<a href=\"https://xyaizknba.github.io/TablaEstatica/tema/Estatica.xml\" target=\"EstaticXml\">XML Ejemplo</a>");
+   
+   cmdGenerar_onClick();
+}
+///////////////////
+function Formato(){
+ var s="";
+ s+="<div align=\"center\">";
+ s+="<table border=\"1\" bgcolor=\"white\">";
+ s+="<tr><th colspan=\"3\">Formateo de Datos</th></tr>";
+ s+="<tr><th>Formato</th><th>Parametro</th><th>Ejemplo / Descripcion</th></tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Normal</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">2</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Mayusculas</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">3</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Minusculas</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">4</td>";
+ s+=" <td align=\"center\">6</td>";
+ s+=" <td>Ceros Iniciales (Con esta configuracion podria mostrar 000085)</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">5</td>";
+ s+=" <td align=\"center\">Si-No</td>";
+ s+=" <td><font color=\"red\">1</font>Si - No<font color=\"red\">0</font> (Tipo de datos numerico)</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">6</td>";
+ s+=" <td align=\"center\">Verdadero-Falso</td>";
+ s+=" <td><font color=\"red\">1</font>Si - No<font color=\"red\">0</font> (Tipo de datos cadena)</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">7</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Numero Negativos en Rojo <font color=\"red\">-67</font></td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">8</td>";
+ s+=" <td align=\"center\">Primer-Segundo</td>";
+ s+=" <td>Cadena segun el Semestre</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">9</td>";
+ s+=" <td align=\"center\">Primer-Segundo-Tercer-Cuarto</td>";
+ s+=" <td>Cadena segun el Timestre</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">10</td>";
+ s+=" <td align=\"center\">Primer-Segundo-Tercer</td>";
+ s+=" <td>cadena segun el Cuatrimestre</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">11</td>";
+ s+=" <td align=\"center\">1 <font color=\"blue\">|</font> 2 <font color=\"blue\">|</font> 3</td>";
+ s+=" <td>Formateo de Fecha 1.- 04-16-1991 2.- 16-04-1991  3.- 1991-04-16</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">12</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Formato Moneda $22,678.78</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">13</td>";
+ s+=" <td align=\"center\">1</td>";
+ s+=" <td>Formato Moneda a letra VeintiTres pesos 00/100 centavos</td>";
+ s+="</tr>";
+ s+="<tr>";    
+ s+=" <td align=\"center\">14</td>";    
+ s+=" <td align=\"center\">1 <font color=\"blue\">|</font> 2 <font color=\"blue\">|</font> 3</td>";
+ s+=" <td>Formateo de Fecha (Date Time) 1.- 04-16-1991 2.- 16-04-1991  3.- 1991-04-16</td>";
+ s+="</tr>";
+ s+="<tr>";
+ s+=" <td align=\"center\">15</td>";    
+ s+=" <td align=\"center\">1</td>";    
+ s+=" <td>Color de Fondo de Celda</td>";
+ s+="</tr>";
+ s+="</table>";
+ s+="</div>";
+ return s;
+}
+
+///////////////
+</script></head><body bgcolor="#DCDCDC">
+
+<div align="center">
+<h1>Tablas HTML Estaticas para mostrar datos que no cambian muy Seguido</h1><br>
+<h2>Protege tu Servidor y tu Base de Datos, generando tus Archivos Estaticos y alojalos en un Servidor Aparte <br><a href="https://armandoramosmagana.blogspot.com/p/tabla-estatica-sql.html" target="MasInfo">Mas Informacion</a></h2>
+<h1>Si requieres que tus datos sean dinamicos visitar la sig. Pagina:<br><a href="https://armandoramosmagana.blogspot.com/p/xml-paginacion.html" target="dinamicPhp">https://armandoramosmagana.blogspot.com/p/xml-paginacion.html</a></h1>
+
+<h3>Contacto Telegram ID: <a href="https://t.me/ReporteadorAndroid">@ReporteadorAndroid</a> Mandame la URL de un Archivo XML generado por esta aplicacion para ayudarte. </h3>
+</div>
+
+
+<div align="center" id="Codigo">
+<script>
+var sCod="";
+if(blnVerFunParam){sCod+=Formato();}
+if(blnVerUrl){
+
+ sCod+="<div class=\"Info\"><h1>Indica el Numero Maximo de Menus y el Numero Maximo de Submenus que requieres agregando los siguientes parametros a esta URL (por ejemplo):</h1>";
+ sCod+="<h2>?iMenus=<font color=\"red\">3</font>&iSubMenus=<font color=\"red\">4</font></h2>"; 
+ sCod+="<h2>para que unicamente tengas los controles que vas a utilizar<br>?iMenus=<font color=\"red\">3</font>&iSubMenus=<font color=\"red\">4</font> para el ejemplo</h2></div>"; 
+}
+sCod+="<form name=\"frm\"><br><br><table>\n";
+sCod+="<tr align=\"center\"><td><input type=\"button\" class=\"BotCarga\" value=\"Cargar Datos de Ejemplo\" onclick=\"CargarEjemplo()\"></td></tr>";
+sCod+="<tr align=\"center\"><th><h1>Observa el XML Generado y el Ejemplo para que entiendas como llenar el Formulario</h1></th></tr>";
+sCod+="<tr align=\"center\" class=\"LnlEjem\"><td><span id=\"urlEjemplo\"></span></td></tr>";
+sCod+="<tr align=\"center\" class=\"LnlEjem\"><td><span id=\"urlXml\"></span></td></tr>";
+
+sCod+="<tr><td>Texto para la Pagina de Inicio index: <input type=\"text\" id=\"txtInicio\" value=\"Inicio\" size=\"20\">&nbsp;&nbsp;&nbsp;&nbsp;Extension Archivos:<input type=\"text\" id=\"extArc\" size=\"5\" maxlength=\"5\" value=\".htm\"></td></tr>\n";
+for(var iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){
+ sCod+="<tr align=\"center\"><th bgcolor=\"#ADD8E6\"><h1>Texto Menu <font color=\"red\">"+iMnuX+"</font>:<input type=\"text\" id=\"txtMnu"+iMnuX+"\" size=\"30\" onblur=\"EtiquetaSubMenu("+iMnuX+")\"></h1></th></tr>\n";
+ for(var iTbl=1;iTbl<=iNumeroSubMenus;iTbl++){
+  sCod+="<tr><td bgcolor=\"#E0FFFF\">&nbsp;&nbsp;&nbsp;&nbsp;<b>Texto SubMenu <font color=\"blue\" size=\"6\">"+iTbl+"</font> dentro de Menu <font color=\"red\" size=\"6\">"+iMnuX+"</font></b>:<input type=\"text\" id=\"txtSub"+iTbl+"Mnu"+iMnuX+"\" onblur=\"NombreArchivo("+iMnuX+","+iTbl+")\">&nbsp;&nbsp;Nombre del Archivo :<input type=\"text\" id=\"txtArc"+iTbl+"Mnu"+iMnuX+"\" size=\"30\">&nbsp;&nbsp;Numero de Campos: <input type=\"text\" id=\"txtNum"+iTbl+"Mnu"+iMnuX+"\" size=\"2\" maxlength=\"2\" onkeyup=\"Ar94(this)\" onblur=\"EstNumCam("+iMnuX+","+iTbl+")\"></td></tr>\n";
+  sCod+="<tr><td bgcolor=\"#E0FFFF\">&nbsp;&nbsp;&nbsp;&nbsp;Consulta SQL: <textarea id=\"txtSql"+iTbl+"Mnu"+iMnuX+"\" cols=\"100\" rows=\"3\"></textarea></td></tr>\n";
+  sCod+="<tr><td bgcolor=\"#E0FFFF\">Etiqueta Campos: <input type=\"text\" id=\"txtLbl"+iTbl+"Mnu"+iMnuX+"\" size=\"100\"></td></tr>\n";
+  sCod+="<tr><td bgcolor=\"#E0FFFF\">&nbsp;&nbsp;&nbsp;&nbsp;Alineacion de Datos: <input type=\"text\" id=\"txtAli"+iTbl+"Mnu"+iMnuX+"\" size=\"20\">&nbsp;&nbsp;&nbsp;&nbsp;<span"+(!blnVerFunParam ? " style=\"visibility:hidden\"":"")+">Formato Campo:</span><input type=\"text\" id=\"txtFmt"+iTbl+"Mnu"+iMnuX+"\" size=\"20\""+(!blnVerFunParam ? " readonly style=\"visibility:hidden\"":"")+">&nbsp;&nbsp;&nbsp;&nbsp;<span"+(!blnVerFunParam ? " style=\"visibility:hidden\"":"")+">Parametros Fmt:</span><input type=\"text\" id=\"txtPara"+iTbl+"Mnu"+iMnuX+"\" size=\"20\""+(!blnVerFunParam ? " readonly style=\"visibility:hidden\"":"")+"></td></tr>\n";
+  sCod+="<tr><td bgcolor=\"#E0FFFF\">Texto Parrafo 1:<input type=\"text\" id=\"txtP1_"+iTbl+"Mnu"+iMnuX+"\" size=\"30\">&nbsp;&nbsp;&nbsp;&nbsp;Texto Parrafo 2:<input type=\"text\" id=\"txtP2_"+iTbl+"Mnu"+iMnuX+"\" size=\"30\"></td></tr>\n";
+  sCod+="<tr><td><br></td></tr>";
+ }
+ sCod+="<tr><td><br></td></tr>";
+}
+sCod+="<tr align=\"center\"><td><input type=\"button\" value=\"Generar\" onclick=\"cmdGenerar_onClick()\"></td></tr>\n";
+sCod+="<tr align=\"center\"><td><textarea rows=\"20\" cols=\"150\" id=\"txtCodigo\" name=\"txtCodigo\"></textarea></td></tr>\n";
+sCod+="</table></form>\n";
+if(blnVerFunParam){sCod+=Formato();}
+Ar201("Codigo",sCod);
+</script></div></body></html>
