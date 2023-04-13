@@ -1,0 +1,25 @@
+[
+ {"id_ciudad":"1", "ciudad":"Chicago"},
+ {"id_ciudad":"2", "ciudad":"Toronto"},
+ {"id_ciudad":"3", "ciudad":"Sacramento"},
+ {"id_ciudad":"4", "ciudad":"Denver"},
+ {"id_ciudad":"5", "ciudad":"Boston"},
+ {"id_ciudad":"6", "ciudad":"Zapopan"}, 
+ {"id_ciudad":"7", "ciudad":"Buenos Aires"},
+ {"id_ciudad":"8", "ciudad":"Veracruz"},
+ {"id_ciudad":"9", "ciudad":"N.Y"},
+ {"id_ciudad":"10", "ciudad":"Michigan"},
+ {"id_ciudad":"11", "ciudad":"Monterrey"},
+ {"id_ciudad":"12", "ciudad":"Chihuahua"},
+ {"id_ciudad":"13", "ciudad":"Granada"},
+ {"id_ciudad":"14", "ciudad":"Hidalgo"},
+ {"id_ciudad":"15", "ciudad":"Gerrero"},
+ {"id_ciudad":"16", "ciudad":"San Francisco"},
+ {"id_ciudad":"17", "ciudad":"Los Angeles"},
+ {"id_ciudad":"18", "ciudad":"Las Vegas"},
+ {"id_ciudad":"19", "ciudad":"Yucatan"},
+ {"id_ciudad":"20", "ciudad":"Zacatecas"}
+ 
+
+  
+]

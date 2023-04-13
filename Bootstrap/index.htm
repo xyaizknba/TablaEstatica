@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+    <link href="estilos.css" rel="stylesheet">
+    <title>Donaciones</title>
+  </head>
+  <body onload="CargaMnuFo()">
+<!-- Inicio navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Demostracion</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Donaciones
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu1">
+              <li><a class="dropdown-item" href="Donaciones.htm?v=891179">Donaciones</a></li>
+              <li><a class="dropdown-item" href="Pdf1RegXml-6.htm?v=891179">Tabla HTML</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tablas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu2">
+              <li><a class="dropdown-item" href="TableHtml.htm?v=891179">Tabla HTML</a></li>
+              <li><a class="dropdown-item" href="TableHtml-6-4.htm?v=891179">Tabla HTML ,6 Renglones 4 Columnas</a></li>
+              <li><a class="dropdown-item" href="JsonDat.htm?v=891179">JsonDat</a></li>
+              <li><a class="dropdown-item" href="Pdf1RegJson.htm?v=891179">Pdf1RegJson</a></li>
+              <li><a class="dropdown-item" href="XmlDat.htm?v=891179">XmlDat</a></li>
+              <li><a class="dropdown-item" href="TableHtml-40-3.htm?v=891179">Tabla HTML, 40 Renglones 3 Columnas</a></li>
+              <li><a class="dropdown-item" href="TableHtmlRegistro.htm?v=891179">Ver Datos del Registro</a></li>
+              <li><a class="dropdown-item" href="TableHtml-25-6.htm?v=891179">Tabla HTML , 25 Renglones 6 Columnas</a></li>
+              <li><a class="dropdown-item" href="TableHtml-4-10.htm?v=891179">Tabla HTML , 4 Renglones 10 Columnas</a></li>
+              <li><a class="dropdown-item" href="pag1.htm?v=891179">Pagina Vacia 1</a></li>
+              <li><a class="dropdown-item" href="TableHtmlRegistro-25.htm?v=891179">Ver Datos del Registro 25 Campos</a></li>
+              <li><a class="dropdown-item" href="Accordion-50.htm?v=891179">Accordion 50 Elementos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paginas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu3">
+              <li><a class="dropdown-item" href="FrmContacto1.htm?v=891179">FrmContacto1</a></li>
+              <li><a class="dropdown-item" href="FrmContacto3.htm?v=891179">FrmContacto3</a></li>
+              <li><a class="dropdown-item" href="FrmContacto2.htm?v=891179">FrmContacto2</a></li>
+              <li><a class="dropdown-item" href="Carousel-10.htm?v=891179">Carousel 10 Imagenes</a></li>
+              <li><a class="dropdown-item" href="pag2.htm?v=891179">Pagina Vacia 2</a></li>
+              <li><a class="dropdown-item" href="Accordion-3.htm?v=891179">Accordion 3 Elementos</a></li>
+              <li><a class="dropdown-item" href="pag3.htm?v=891179">Pagina Vacia 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Elementos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu4">
+              <li><a class="dropdown-item" href="Accordion-20.htm?v=891179">Accordion 20 Elementos</a></li>
+              <li><a class="dropdown-item" href="Carousel-3.htm?v=891179">Carousel 3 Imagenes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Muchas Paginas Vacias
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu5">
+              <li><a class="dropdown-item" href="html_1.htm?v=891179">Pagina en Blanco 1</a></li>
+              <li><a class="dropdown-item" href="html_2.htm?v=891179">Pagina en Blanco 2</a></li>
+              <li><a class="dropdown-item" href="html_3.htm?v=891179">Pagina en Blanco 3</a></li>
+              <li><a class="dropdown-item" href="html_4.htm?v=891179">Pagina en Blanco 4</a></li>
+              <li><a class="dropdown-item" href="html_5.htm?v=891179">Pagina en Blanco 5</a></li>
+              <li><a class="dropdown-item" href="html_6.htm?v=891179">Pagina en Blanco 6</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nvMnu6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Reportes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nvMnu6">
+              <li><a class="dropdown-item" href="reporte-50-8.htm?v=891179">Reporte 1</a></li>
+              <li><a class="dropdown-item" href="Carousel-8.htm?v=891179">Carousel 8 Imagenes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Fin navbar -->
+     
+     <br>
+    <div class="container">
+     Estas Paginas Web Fueron generadas automaticamente por medio de un programa que lee un archivo <a href="DataTableSqlDemo4.xml" target="xml" title="Ver para comprender como se generaron estas paginas"><b>XML</b></a>, este programa es capaz de generar miles de paginas Web, 
+     para que en su conjunto se puedan crear Sistemas Complejos, de manera predeterminada si se especifiva un componente <a href="TableHtml.htm" target="table"><b>TableHtml</b></a> se creara una tabla HTML que ya incluye  
+     paginacion de datos y la generacion de PDF con los datos contenidos en esa tabla.<br><br>
+     
+     En estos ejemplos se emplearon archivos con Formato <a href="ciudad.xml" target="xml"><b>XML</b></a> y <a href="datos.txt" target="json"><b>JSON</b></a> para enseñar algunas caracteristicas de la generacion automatica de <a href="Pdf1RegXml-6.htm" target="xml"><b>PDF</b></a> e implementacion de DataTable.<br><br>
+     
+     El Programa que genera estas paginas WEB permite generar Sistemas para PHP , JSP , JSTL y NodeJs , tengo mas de 100 componentes pero muchos de ellos requieren un lenguaje del
+     lado del eservidor, en este ejemplo se uso JavaScript para incluir la <a href="NavBar.htm" target="xml"><b>Header</b></a> y el <a href="Footer.txt" target="xml"><b>Footer</b></a> de la pagina.<br><br>
+     
+     El componente TableHtml es el componente mas simple y puede especificarse como <a href="TableHtml-40-3.htm"><b>TableHtml-40-3</b></a> , esto creara una tabla con 40 renglones y 3 columnas, puede adaptarse facilmente
+     para cargar informacion de la Base de datos.<br><br>
+     
+     Tengo componentes que trabajan con algun lenguage del servidor como el componente PhpOrdSelect-3 que genera todo el codigo fuente en PHP para Ver los datos, ordenarlos
+     , generacion de PDF, etc
+     
+    
+    </div>
+    <hr color="red">
+
+    <div class="container">
+     These Web Pages Were generated automatically by means of a program that reads an <a href="DataTableSqlDemo4.xml" target="xml" title="See to understand how these pages were generated"><b>XML</b></a>, file, this program is capable of generating thousands of Web pages,
+      so that as a whole Complex Systems can be created, by default if a <a href="TableHtml.htm" target="table"><b>TableHtml</b></a> component is specified an HTML table will be created that already includes
+      pagination of data and the generation of PDF with the data contained in that table.<br><br>
+     
+     In these examples, <a href="ciudad.xml" target="xml"><b>XML</b></a> and <a href="datos.txt" target="json"><b>JSON</b></a> Format files were used to teach some features of automatic <a href="Pdf1RegXml-6.htm" target="xml"><b>PDF</b></a> generation and DataTable implementation.<br><br>
+     
+     The Program that generates these WEB pages allows generating Systems for PHP, JSP, JSTL and NodeJs, I have more than 100 components but many of them require a language of the
+      Server side, in this example JavaScript was used to include the <a href="NavBar.htm" target="xml"><b>Header</b></a> and <a href="Footer.txt" target="xml"><b>Footer</b></a> of the page.<br><br>
+     
+     The TableHtml component is the simplest component and can be specified as <a href="TableHtml-40-3.htm"><b>TableHtml-40-3</b></a> , this will create a table with 40 rows and 3 columns, it can be easily adapted
+      to load information from the database.<br><br>
+     
+      I have components that work with some server language such as the PhpOrdSelect-3 component that generates all the source code in PHP to View the data, sort it, generate PDF, etc.<br><br>
+     
+    
+    </div>
+    
+    
+
+
+
+   <div id="FooterX"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <script src="CargarMenu.js"></script>
+    <script>
+    </script>
+  </body>
+</html>

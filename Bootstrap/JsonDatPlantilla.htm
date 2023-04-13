@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+    <link href="estilos.css" rel="stylesheet">
+    <title>Demostracion</title>
+  </head>
+  <body onload="CargaMnuFo()">
+    <div id="MnuJsNavBar"></div>
+    <div class="container"><h1>JsonDat (Componente JsonDat-2)</h1></div>
+
+
+    <div class="container"><input type="button" class="btn btn-primary" value="Cargar / Recargar Datos" id="cmdDatJson"></div>
+    <div class="container" id="datJson"></div>
+    
+    
+    <div class="container">
+      <table class="table table-light table-striped" id="tblPdf1">
+        <tr><th>Id Ciudad:</th><td id="sDato1"></td></tr>
+        <tr><th>Ciudad</th><td id="sDato2"></td></tr>
+      </table>
+    </div><br>
+    
+    
+    
+    <div id="FooterX"></div><i class="bi bi-chevron-double-down"></i>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <script src="CargarMenu.js?v=13"></script>
+    <script>
+    
+var aDatoRegistro = Array(2);    
+function CargarDatosJson(){
+ if(document.getElementById("datJson")!==null){
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+   if(xhr.readyState==4 && xhr.status==200){
+    let i,sTb,aD=JSON.parse(xhr.responseText);
+    if(aD.length>0){
+     sTb="<table class=\"table table-light table-striped\" id=\"tblPdf\"><thead><tr>";
+      sTb+="<th>Id Ciudad</th>";
+      sTb+="<th>Ciudad</th>";
+     sTb+="</tr></thead><tbody>";
+     for(i=0;i<aD.length;i++){
+      sTb+="<tr onclicK=\"Copiar('"+aD[i].id_ciudad+"','"+TrPdfJs(aD[i].ciudad)+"')\">";
+      sTb+="<td>"+ aD[i].id_ciudad +"</td>";
+      sTb+="<td>"+ TdPdfJs(aD[i].ciudad) +"</td>";
+      sTb+="</tr>";
+     }
+     sTb+="</tbody></table><br>";
+     sTb+="<div class=\"container\">";
+     sTb+=" <div class=\"row\">";
+     sTb+="  <div class=\"col\"><button class=\"btn btn-success\" onclick=\"if(confirm('Generar PDF')){GenerarPdf();}\"><i class=\"bi bi-chevron-double-up\"> Todos los Registros</i></button></div>";
+     sTb+="  <div class=\"col\"><b>&lt;-- PDF --&gt;</b></div>";
+     sTb+="  <div class=\"col\"><button class=\"btn btn-success\" onclick=\"if(confirm('Generar PDF 1 Registro')){GenerarPdf1Reg();}\">1 Registro <i class=\"bi bi-chevron-double-down\"></i></button></div>";
+     sTb+=" </div>";
+     sTb+="</div><br>";
+     document.getElementById("datJson").innerHTML=sTb; sTb="";CargarDataTable();
+    }
+   }
+  };
+  xhr.open("GET",("datos.txt?v="+Math.random(99999999)),true);
+  xhr.send();
+ }
+}
+
+function Copiar(A,B){
+ if(document.getElementById("sDato1")!==null){document.getElementById("sDato1").innerHTML=TdPdfJs(A);}
+ if(document.getElementById("sDato2")!==null){document.getElementById("sDato2").innerHTML=TdPdfJs(B);}
+}
+
+
+    function GenerarPdf1Reg(){var doc=new jsPDF("l","pt","letter");var y=20;doc.setLineWidth(2);doc.text(200, y=+20, "Datos");doc.autoTable({html:"#tblPdf1",startY:30,rowPageBreak:"auto",horizontalPageBreak:true,horizontalPageBreakRepeat:0,theme:"grid",bodyStyles:{textColor:"#000000",fontSize:9},alternateRowStyles:{fillColor:"#f4f6f6"},columnStyles:{0:{ halign:"left",cellWidth:"30%"},1:{ halign:"left",cellWidth:"70%"}}});doc.save("Datos PDF");}
+    function GenerarPdf(){var doc=new jsPDF("p","pt","letter");var y=20;doc.setLineWidth(2);doc.text(200, y=+20, "Datos PDF");doc.autoTable({html:"#tblPdf",startY:30,rowPageBreak:"auto",horizontalPageBreak:true,horizontalPageBreakRepeat:0,theme:"grid",headStyles:{fillColor:"#800000",textColor:"#ffff00",halign:"center",fontSize:10},bodyStyles:{textColor:"#000000",fontSize:9},alternateRowStyles:{fillColor:"#f4f6f6"},columnStyles:{}});doc.save("DatosPdf");}
+    </script>
+  </body>
+</html>
