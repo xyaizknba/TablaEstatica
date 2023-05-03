@@ -1,0 +1,8 @@
+[
+ {"id_ciudad":"1","ciudad":"Chicago"},
+ {"id_ciudad":"2","ciudad":"Toronto"},
+ {"id_ciudad":"3","ciudad":"Sacramento"},
+ {"id_ciudad":"4","ciudad":"Boston"},
+ {"id_ciudad":"5","ciudad":"Denver"},
+ {"id_ciudad":"6","ciudad":"Indiana"}
+]

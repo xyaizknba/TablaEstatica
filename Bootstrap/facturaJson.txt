@@ -1,0 +1,6 @@
+[
+{"cantidad":"1","producto":"Radio FM","precio":"230","subtotal":"230"},
+{"cantidad":"3","producto":"Antena WiFi","precio":"250","subtotal":"750"},
+{"cantidad":"1","producto":"Disco Duro","precio":"1500","subtotal":"1500"},
+{"":"","":"","":"","subtotal":"2480"}
+]

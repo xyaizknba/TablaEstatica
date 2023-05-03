@@ -1,0 +1,17 @@
+[
+ {"id_persona":"1","nombre":"Armando","paterno":"Ramos","materno":"M.","ciudad":"C.D.M.X.","sueldo":"50256.56","fecha_contratacion":"2022-08-08"},
+ {"id_persona":"2","nombre":"Monica","paterno":"Santos","materno":"Aguirre","ciudad":"Chicago","sueldo":"20787","fecha_contratacion":"2018-02-25"}, 
+ {"id_persona":"3","nombre":"Sandra","paterno":"Munguia","materno":"Lopez","ciudad":"Toronto","sueldo":"10256","fecha_contratacion":"2019-01-23"},
+ {"id_persona":"4","nombre":"Teresa","paterno":"Sanchez","materno":"Gutierrez","ciudad":"Sacramento","sueldo":"8500","fecha_contratacion":"2021-12-13"},
+ {"id_persona":"5","nombre":"Saday","paterno":"Williams","materno":"Garcia","ciudad":"Veracruz","sueldo":"23451","fecha_contratacion":"2021-10-27"},
+ {"id_persona":"6","nombre":"Brenda","paterno":"Fernandez","materno":"Marquez","ciudad":"Boston","sueldo":"14235","fecha_contratacion":"2018-05-01"},
+ {"id_persona":"7","nombre":"Susana","paterno":"Gonzalez","materno":"Ramirez","ciudad":"N.Y.","sueldo":"47585","fecha_contratacion":"2017-11-13"},
+ {"id_persona":"8","nombre":"Berenice","paterno":"Gutierrez","materno":"Borland","ciudad":"Kansas","sueldo":"18000","fecha_contratacion":"2015-09-20"},
+ {"id_persona":"9","nombre":"Vianney","paterno":"Zapata","materno":"Karter","ciudad":"Detroit","sueldo":"22484","fecha_contratacion":"2014-10-10"},
+ {"id_persona":"10","nombre":"Dilery","paterno":"Ceballos","materno":"Jimenez","ciudad":"Guadalajara","sueldo":"23256","fecha_contratacion":"2021-07-16"},
+ {"id_persona":"11","nombre":"Arianna","paterno":"Flores","materno":"Jordan","ciudad":"Dallas","sueldo":"45127","fecha_contratacion":"2022-11-16"},
+ {"id_persona":"12","nombre":"Iris","paterno":"Cortez","materno":"Velazquez","ciudad":"Sacramento","sueldo":"12459","fecha_contratacion":"2017-09-03"},
+ {"id_persona":"13","nombre":"Karla","paterno":"Marquez","materno":"Vazquez","ciudad":"Toronto","sueldo":"14561","fecha_contratacion":"2023-01-01"},
+ {"id_persona":"14","nombre":"Itzel","paterno":"Lopez","materno":"Cordova","ciudad":"C.D.M.X.","sueldo":"9999","fecha_contratacion":"2022-02-07"}            
+
+]
