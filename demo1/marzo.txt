@@ -1,0 +1,49 @@
+<table width="50%">
+<tr align="center" class="vTH"><th colspan="4">Ventas Mes Marzo</th></tr>
+<tr class="vTHL">
+ <th>Producto</th>
+ <th>Cantidad</th>
+ <th>Precio</th>
+ <th>Sub-Total</th>
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Leche</td>
+ <td>4</td>
+ <td>$17.5</td>  
+ <td>$70</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Harina de Trigo</td>
+ <td>1</td>
+ <td>$20</td>
+ <td>$20</td>   
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Papas Fritas</td>
+ <td>2</td>
+ <td>$18</td>  
+ <td>$36</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Refresco</td>
+ <td>4</td>
+ <td>$13.5</td>  
+ <td>$54</td> 
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Chocolate</td>
+ <td>3</td>
+ <td>$28.9</td>  
+ <td>$86.7</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Avena</td>
+ <td>5</td>
+ <td>$54</td>  
+ <td>$270</td> 
+</tr>
+<tr>
+ <td colspan="3" align="right">Total</td>
+ <td align="center" class="vTot">$536.7</td>
+</tr>
+</table>

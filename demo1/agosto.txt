@@ -1,0 +1,39 @@
+<table width="50%">
+<tr align="center" class="vTH"><th colspan="4">Ventas Mes Agosto</th></tr>
+<tr class="vTHL">
+ <th>Producto</th>
+ <th>Cantidad</th>
+ <th>Precio</th>
+ <th>Sub-Total</th>
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Disco Duro Externo</td>
+ <td>1</td>
+ <td>$1,750</td>  
+ <td>$1,750</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Teclado Mecanico</td>
+ <td>1</td>
+ <td>$320</td>
+ <td>$320</td>   
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Bocina</td>
+ <td>2</td>
+ <td>$186</td>  
+ <td>$372</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Aire Comprimido</td>
+ <td>3</td>
+ <td>$54</td>  
+ <td>$162</td> 
+</tr>
+
+
+<tr>
+ <td colspan="3" align="right">Total</td>
+ <td align="center" class="vTot">$2,604</td>
+</tr>
+</table>

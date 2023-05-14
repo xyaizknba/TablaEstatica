@@ -1,0 +1,33 @@
+<table width="50%">
+<tr align="center" class="vTH"><th colspan="4">Ventas Mes Enero</th></tr>
+<tr class="vTHL">
+ <th>Producto</th>
+ <th>Cantidad</th>
+ <th>Precio</th>
+ <th>Sub-Total</th>
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Cable Coaxial</td>
+ <td>2</td>
+ <td>489</td>  
+ <td>978</td> 
+</tr>
+<tr align="center" class="vTp">
+ <td align="left">Radio FM</td>
+ <td>4</td>
+ <td>$689</td>
+ <td>$2,756</td>   
+</tr>
+<tr align="center" class="vTi">
+ <td align="left">Antena WiFi</td>
+ <td>5</td>
+ <td>$201</td>  
+ <td>$1,005</td> 
+</tr>
+
+
+<tr>
+ <td colspan="3" align="right">Total</td>
+ <td align="center" class="vTot">$4,739</td>
+</tr>
+</table>

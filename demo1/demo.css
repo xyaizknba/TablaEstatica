@@ -1,0 +1,18 @@
+.vTot{background-color:#000000;color:#FFFF00;font-size:large}
+.vTi{background-color:#E0FFFF;color:black}
+.vTp{background-color:#FFF8DC;color:black}
+.vTH{background-color:#FFDEAD;color:black}
+.vTHL{background-color:#800000;color:#FFFF00}
+
+
+.txtFoc{background-color:#D3D3D3;color:black;font-weight:bolder}
+.txtBlu{background-color:white;color:black;font-weight:bolder}
+
+.txtFocMay{background-color:#D3D3D3;color:black;font-weight:bolder;text-transform: uppercase}
+.txtBluMay{background-color:white;color:black;font-weight:bolder;text-transform: uppercase}
+
+.dMarcoMsg {border-color:blue;border-style:dotted;border-width:3px;width:30%}
+.bMarcoMsgMo{padding:top;font-size:large}
+.error {color:red;font-weight:bolder}
+
+

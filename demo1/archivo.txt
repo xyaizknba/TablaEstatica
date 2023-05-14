@@ -1,0 +1,4 @@
+Nombre*-*Paterno*-*Telefono*-*Edad
+Laura*-*Perez*-*587489*-*25
+Monica*-*Carmona*-*33145789*-*22
+Itzel*-*Zapata*-*4574964*-*22

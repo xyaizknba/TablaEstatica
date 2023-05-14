@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="author" content="Armando Ramos M." /><meta name="description" content="Atributos HTM - Armando Ramos M." /><title></title><link rel="stylesheet" href="demo.css?v=23"></head>
+<body bgcolor="#DCDCDC">
+<div align="center">
+  <h3 align="center"><span data-ar-sal-dia="Buenos Dias" data-ar-sal-tar="Buenas Tardes" data-ar-sal-noc="Buenas Noches"></span> Haz visitado esta pagina <span data-ar-visit="1"></span> veces</h3>
+  <h1><span id="Inf" data-ar-txt-cambio="Libreria ar.js-*-Paginas Web Dinamicas-*-Sin JavaScript" data-ar-txt-cambio-del="-*-" data-ar-txt-cambio-vel="2"></span></h1>
+  
+
+  
+  <h3>Lectura Archivo CSV</h3>
+  <div id="idDatos" data-ar-tbl-csv="vqQngbf" data-ar-tbl-csv-par="vTp" data-ar-tbl-csv-inpar="vTi" data-ar-tbl-csv-head="vTH" data-ar-tbl-csv-url="archivo.txt" data-ar-tbl-csv-wid="50%" data-ar-tbl-csv-div="*-*"></div>
+  <p>Origen Datos <a href="archivo.txt" target="origen">archivo.txt</a></p>
+  <span data-ar-brs="5"></span>
+
+  Selecciona para cargar datos Externos<select data-ar-txt-url="dVentas">
+    <option value=""></option>
+    <option value="enero.txt">Enero</option>
+    <option value="marzo.txt">Marzo</option>
+    <option value="agosto.txt">Agosto</option>
+  </select> Origen de datos <a href="enero.txt" target="origen">enero.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="marzo.txt" target="origen">marzo.txt</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="agosto.txt" target="origen">agosto.txt</a><br><span style="color:red;background: black" id="dVentas"></span> 
+  
+   <h1 style="color:blue">Pagina HTML sin ningun Codigo JavaScript, Formulario Validado unicamente con Atributos HTML</h1>
+  
+  <span data-ar-brs="5"></span>
+
+ 
+
+
+  <form name="frm1" id="frm1">
+    <table width="50%">
+     <tr>
+      <td><label for="Email1">Email</label></td>
+      <td>
+       <input type="email" name="Email1" id="Email1"  size="80" placeholder="Email" data-kitana="Ingresa una Direccion de EMail Correcta" data-kitana-i="z_ree1" data-kitana-o="Dato Obligatorio" data-chingon-f="txtFoc" data-chingon-b="txtBlu" required />
+      </td>
+      <td><span id="m_err1" class="error"></span></td>
+     </tr>
+     <tr>
+      <td ><label for="Email2">Email Trabajo</label></td>
+      <td>
+        <input type="email" name="Email2" id="Email2"  size="80" placeholder="Email Trabajo" data-kitana="Ingresa una Direccion de EMail Correcta" data-kitana-i="z_ree2"  data-chingon-f="txtFoc" data-chingon-b="txtBlu" /> 
+      </td>
+      <td><span id="m_err2" class="error"></span></td>
+     </tr>
+     
+     <tr>
+      <td colspan="3">Comentario :</td>
+     </tr>     
+     <tr>
+      <td colspan="3">
+        <textarea cols="100" rows="3" name="txtComentario" id="txtComentario" maxlength="150" placeholder="Comentario" data-kenshi="1" data-kenshi-1="1" data-kenshi-2="m_err3" data-kenshi-3="Dato Obligatorio" data-kenshi-4="10" data-kenshi-5="Ingresa un Comentario Minimo 10 Caracteres " data-chingon-f="form-control txtFoc" data-chingon-b="form-control" required ></textarea>      
+      </td>
+     </tr>
+     <tr>
+      <td colspan="3"><span id="m_err3" class="error"></span></td>
+     </tr>
+
+     <tr>
+      <td colspan="3">Observaciones :</td>
+     </tr>     
+     <tr>
+      <td colspan="3">
+        <textarea cols="100" rows="3"  name="Observaciones" id="Observaciones"  maxlength="150" placeholder="Observaciones" data-kenshi="3" data-kenshi-1="1" data-kenshi-2="m_err4" data-kenshi-3="Dato Obligatorio" data-kenshi-4="1" data-kenshi-5="Minimo de Caracteres 1" data-chingon-f="form-control txtFoc" data-chingon-b="form-control" required ></textarea>      
+      </td>
+     </tr>
+     <tr align="center">
+      <td colspan="3"><span id="m_err4" class="error"></span></td>
+     </tr>
+
+     <tr>
+      <td>Codigo Postal:</td>
+      <td colspan="2">
+       <input type="text" name="txtCodigoPostalObliga" id="txtCodigoPostalObliga" maxlength="5" size="5" class="form-control bi bi-house-door-fill" placeholder="C.P" data-terminator-1="m_err5" data-terminator-2="El Codigo Postal son 5 Numeros" data-terminator-3="Dato Obligatorio" data-chingon-f="txtFoc" data-chingon-b="txtBlu" required />
+       <span id="m_err5" class="error"></span>       
+      </td>
+     </tr> 
+
+     <tr>
+       <td>Email Empresa</td>
+       <td colspan="2">
+         <input type="text" name="EmEmpresa" id="EmEmpresa" size="80" maxlength="80" placeholder="Email" required /><br>
+         <input type="text" name="EmEmpresaConf" id="EmEmpresaConf" size="80" maxlength="80" placeholder="Email" required /><br>
+       </td>
+     </tr>
+     <tr align="center">
+      <td colspan="3"><span id="m_err6" class="error" data-chingon01="EmEmpresa" data-chingon02="EmEmpresaConf" data-chingon03="Ingresa el mismo EMail 2 Veces para que sea Correcto" data-obl="El Email de la empresa es un Dato Obligatorio" data-chingon-f="txtFoc" data-chingon-b="txtBlu" /></span></td>
+     </tr>
+     
+     <tr>
+      <td>Ocupacion:
+      
+        <select data-ar-sel-div="1">
+           <option value=""></option>
+           <option value="idEstudiante">Estudiante</option>
+           <option value="idDeportista">Deportista</option>
+        </select>      
+      </td>
+      <td colspan="2">
+
+        <div id="idEstudiante">
+           <h4 align="center">Estudiante</h4>
+           <table>
+            <tr>
+             <td>Escuela (Convierte a Mayusculas)</td>
+             <td>
+             
+              <input type="text" id="txtEscuela" data-Intvan-1="14" data-Intvan-2="0" data-Intvan-3="txtFocMay" data-Intvan-4="txtBluMay" data-Intvan-5="m_err10" size="20">&nbsp;&nbsp;<span id="m_err10"></span>
+             
+             </td>
+            </tr>
+            <tr>
+             <td>Grado Escolar</td>
+             <td>
+              <select>
+               <option value="1">Primero</option>
+               <option value="2">Segundo</option>
+               <option value="3">Tercero</option>
+              </select>
+             </td>
+            </tr>
+            <tr>
+             <td>Carrera</td>
+             <td>
+                <select name="cboCarrera" id="cboCarrera" lucas="m_err9" lucas1="La carrera es Obligatoria">
+                 <option value="0"></option>
+                 <option value="1">Informatica</option>
+                 <option value="2">Derecho</option>
+                 <option value="3">Medicina</option>
+                </select>&nbsp;&nbsp;<span id="m_err9" class="error">La carrera es Obligatoria</span>
+                           
+             </td>
+            </tr>
+            
+           </table>
+         </div>
+
+        <div id="idDeportista">
+          <h4 align="center">Deportista</h4>
+          <table>
+            <tr>
+             <td>
+                Deporte <select data-ar-cambio-img="img">
+                  <option value="blanco.png"></option>
+                  <option value="basquet.png">Basquetboll</option>
+                  <option value="americano.png">Futboll Americano</option>
+                  <option value="box.png">Boxeo</option>
+                  
+                 </select>             
+             </td>
+             <td>
+               <img id="img" src="blanco.png" />
+             </td>
+            </tr>
+          </table>
+        </div>
+
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <label for="cboFechaNacimiento_Dia"> Fecha</label>
+       
+      </td>
+      <td colspan="2">
+          <span class="col-lg-3 col-md-6 col-xs-12" id="i_FechaNacimientoDia"></span>
+          <span class="col-lg-3 col-md-6 col-xs-12" id="i_FechaNacimientoMes"></span>
+          <span class="col-lg-3 col-md-6 col-xs-12" id="i_FechaNacimientoAnio"></span>
+          <span duke="FechaNacimiento" duke1="form-control" duke2="Fecha Incorrecta" duke3="Fecha de Nacimiento Obligatoria" duke4="1975" duke5="2020" duke6="A&ntilde;o Selecciona ..." duke7="Mes Selecciona ..." duke8="Dia Selecciona ..." duke9="m_err7"></span>
+          <input type="text" name="FechaNacimiento" id="FechaNacimiento" maxlength="10" size="10" readonly /> <span data-ar-blink="10" data-ar-blink-vel="1" class="arm">* Este campo es que usarias</span>
+      </td>
+     </tr>
+     <tr align="center"><td colspan="3"><span id="m_err7" class="error"></span></td></tr>     
+     
+     
+     <tr>
+      <td>Folio</td>
+      <td><input type="text" id="txtFolio" data-Intvan-1="22" data-Intvan-2="6" data-Intvan-3="txtFoc" data-Intvan-4="txtBlu" data-Intvan-5="m_err8" size="10" maxlength="7"></td>
+      <td><span id="m_err8" class="error"></span></td>
+     </tr>
+     
+     <tr>
+      <td>Telefono</td>
+      <td colspan="2">
+       <input type="text" name="txtTelCelular" id="txtTelCelular" maxlength="15" size="15" class="form-control bi bi-house-door-fill" placeholder="Telefono" data-terminator-1="m_err11" data-terminator-2="El numero de Telefono tiene que tener 10 digitos" data-terminator-3="Numero de Telefono Obligatorio" data-chingon-f="form-control bi bi-house-door-fill txtFoc" data-chingon-b="form-control bi bi-house-door-fill" required />
+      </td>
+     </tr>
+     <tr>
+      <td colspan="3"><h3 id="m_err11" class="error"></h3></td>
+     </tr>
+     
+     <tr align="center">
+      <td colspan="2"><input type="button" id="cmdBorrar1" class="" value="Limpiar" data-chingon21="0" data-chingon22="Deseas Borrar los datos ingresados."  data-ar-cls-momov="" data-ar-cls-moout="" /></td>
+     </tr>
+    </table>
+
+ </div>
+       
+
+</form>
+<span data-ar-brs="5"></span>
+<div align="center">
+<form name="frm2" id="frm2">
+         
+          <span id="cant1">Cantidad</span> :<input type="text" id="txtCantidad" name="txtCantidad" size="5" maxlength="5">
+          Precio:<input type="text" id="txtPrecio" name="txtPrecio" size="5" maxlength="5"> :
+          <span id="m_err36" data-mult1="gkgPnagvqnq" data-mult2="gkgCerpvb" data-mult3="gkgErfZhy" data-mult4="0" data-chingon-f="txtFoc" data-chingon-b="txtBlu"></span>
+          <input type="hidden" id="txtResMul"><br><br>         
+         
+         
+          <span id="cant2">Cantidad</span>
+          <select id="cboCantidad" data-ar-jayden="1" data-ar-jayden-1="z_ree37" data-ar-jayden-2="gkgCerpvbC" data-chingon-f="txtFoc" data-chingon-b="txtBlu">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>  Precio :<input type="text" id="txtPrecioP" value="30" size="8" maxlength="8"> : <span id="m_err37"></span><br><br>         
+         
+         
+          <table border="12">
+           <tr>
+            <th></th>
+            <th bgcolor="#FFDAB9"><span id="sum">Sumas</span></th>
+            <th bgcolor="#B0C4DE"><span id="max">Maximo</span></th>
+            <th bgcolor="#ADD8E6"><span id="prm">Promedio</span></th>
+           </tr>
+           <tr>
+            <td>Num 1</td>
+            <td bgcolor="#FFDAB9"><input type="text" name="txtXSum1" id="txtXSum1" maxlength="5" /></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax1" id="txtMax1" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"><input type="text" name="txtProm1" id="txtProm1" maxlength="5" /></td>
+           </tr>
+           <tr>
+            <td>Num 2</td>
+            <td bgcolor="#FFDAB9"><input type="text" name="txtXSum2" id="txtXSum2" maxlength="5" /></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax2" id="txtMax2" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"><input type="text" name="txtProm2" id="txtProm2" maxlength="5" /></td>
+           </tr>
+           <tr>
+            <td>Num 3</td>
+            <td bgcolor="#FFDAB9"><input type="text" name="txtXSum3" id="txtXSum3" maxlength="5" /></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax3" id="txtMax3" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"><input type="text" name="txtProm3" id="txtProm3" maxlength="5" /></td>
+           </tr>
+
+           <tr>
+            <td>Num 4</td>
+            <td bgcolor="#FFDAB9"></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax4" id="txtMax4" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"><input type="text" name="txtProm4" id="txtProm4" maxlength="5" /></td>
+           </tr>
+           <tr>
+            <td>Num 5</td>
+            <td bgcolor="#FFDAB9"></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax5" id="txtMax5" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"><input type="text" name="txtProm5" id="txtProm5" maxlength="5" /></td>
+           </tr>
+           <tr>
+            <td>Num 6</td>
+            <td bgcolor="#FFDAB9"></td>
+            <td bgcolor="#B0C4DE"><input type="text" name="txtMax6" id="txtMax6" maxlength="5" /></td>
+            <td bgcolor="#ADD8E6"></td>
+           </tr>
+
+
+           <tr align="center">
+            <td>Total</td>
+            <td bgcolor="#FFDAB9">
+             <span id="m_err33" data-chingon61="gkgKBphygb" data-chingon62="gkgKFhz" data-chingon63="1" data-chingon64="3" data-chingon65="1" data-chingon-f="txtFoc" data-chingon-b="txtBlu"></span>
+             <input type="hidden" name="txtXOculto" id="txtXOculto" readonly>
+            </td>
+            <td bgcolor="#B0C4DE">
+             <span id="m_err34" data-max1="gkgZnk" data-max2="1" data-max3="6" data-max4="gkgZnkvzbBphygb" data-chingon-f="txtFoc" data-chingon-b="txtBlu"></span>
+             <input type="hidden" name="txtMaximoOculto" id="txtMaximoOculto">
+            </td>
+            <td bgcolor="#ADD8E6">
+               <span id="m_err35" data-chingon81="txtXOculto2" data-chingon82="txtProm" data-chingon83="1" data-chingon84="5" data-chingon85="1" data-chingon-f="txtFoc" data-chingon-b="txtBlu"></span>
+               <input type="hidden" name="txtXOculto2" id="txtXOculto2">     
+            </td>
+           </tr>
+           <tr align="center">
+            <td colspan="4">
+             <input type="button" id="cmdBorrar2" class="" value="Limpiar" data-chingon21="1" data-chingon22="Deseas Borrar los datos ingresados."  data-ar-cls-momov="" data-ar-cls-moout="" />    
+            </td>
+           </tr>
+
+          </table>
+
+
+          
+</form>
+
+<h1 color="blue">
+ Existe una aplicacion en la cual unicamente tecleo los parametros de conexion a la base de datos y este tiene un generador de Formularios sin incluir JavaScript
+ 
+ <a href="https://fv1edkwrctypttutk0f0ua.on.drv.tw/www/DbEstructura/index.htm" target="db">Estructura Base de Datos</a> y buscar el enlace que dice Formulario WEB 
+ 
+</h1>
+
+
+<span data-ar-brs="5"></span>
+<div id="calendario" data-chingon51="" data-chingon52="" data-chingon53="" data-chingon54="diaHoy" data-chingon55="otrosDias" data-chingon56="sMesAnio" data-chingon57="sNomDiaSem" data-chingon58="2" data-chingon59="1" data-chingon510="50%"></div><br>
+
+
+<h1><a href="https://armandoramosmagana.blogspot.com/p/libreria-javascript.html" target="js">Libreria</a></h1>
+</div> 
+
+
+
+ <span id="prgAR">Armando Ramos M.</span> 
+ <script src="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v5/ar.js"></script>
+</body>
+</html> 
