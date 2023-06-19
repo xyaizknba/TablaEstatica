@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<producto>
+ <registro>
+  <cantidad>1</cantidad>
+  <producto>Radio</producto>
+  <precio>584</precio>
+  <subtotal>584</subtotal>
+ </registro>
+ <registro>
+  <cantidad>3</cantidad>
+  <producto>Antena WiFi</producto>
+  <precio>485</precio>
+  <subtotal>1455</subtotal>
+ </registro>
+ <registro>
+  <cantidad>1</cantidad>
+  <producto>Router MiFi</producto>
+  <precio>1350</precio>
+  <subtotal>1350</subtotal>
+ </registro>
+ 
+ <registro>
+  <cantidad></cantidad>
+  <producto></producto>
+  <precio></precio>
+  <subtotal>3389</subtotal>
+ </registro>
+ 
+</producto>

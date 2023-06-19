@@ -1,0 +1,1 @@
+[{"id":"1","descripcion":"Televisiones","precio":"23","stock":"2"},{"id":"2","descripcion":"balon","precio":"20","stock":"3"},{"id":"3","descripcion":"Computadora","precio":"23","stock":"50"}]

@@ -1,0 +1,16 @@
+<productos>
+  <registro>
+    <producto>Radio</producto> 
+    <marca>Sony</marca>
+    <descripcion>HD Radio </descripcion>
+    <precio>25</precio>
+  </registro>
+
+  <registro>
+    <producto>Telefono Nokia</producto> 
+    <marca>Nokia</marca>
+    <descripcion>Nokia 1110 Telefono Basico</descripcion>
+    <precio>250</precio>
+  </registro> 
+   
+</productos>

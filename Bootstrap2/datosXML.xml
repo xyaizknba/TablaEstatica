@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ventas>
+ <registro>
+  <descripcion>Avion</descripcion>
+  <stock>3</stock>
+ </registro>
+ <registro>
+  <descripcion>Computadora</descripcion>
+  <stock>15</stock>
+ </registro>
+  <registro>
+  <descripcion>Televisiones</descripcion>
+  <stock>10</stock>
+ </registro> 
+ <registro>
+  <descripcion>Tenis</descripcion>
+  <stock>23</stock>
+ </registro> 
+ 
+</ventas>

@@ -1,0 +1,7 @@
+[
+ {"nombre":"Armando","paterno":"Ramos","edad":"18","profesion":"Piloto Avion A-10"},
+ {"nombre":"Itzel","paterno":"Palacios","edad":"23","profesion":"Enfermera"},
+ {"nombre":"Terminator","paterno":"","edad":"","profesion":"Exterminador"},
+ {"nombre":"Laura","paterno":"Rivas","edad":"26","profesion":"Dentista"},
+ {"nombre":"Monica","paterno":"Carmona","edad":"19","profesion":"Estudiante"} 
+]

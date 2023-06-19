@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<personas>
+
+ <registro>
+  <nombre>Armando</nombre>
+  <paterno>Ramos</paterno>
+  <materno>M</materno>
+  <edad>18</edad>
+  <ocupacion>Astronauta</ocupacion>
+ </registro>
+ 
+ <registro>
+  <nombre>Miriam</nombre>
+  <paterno>Perez</paterno>
+  <materno>Lopez</materno>
+  <edad>23</edad>
+  <ocupacion>Deportista</ocupacion>
+ </registro>
+ 
+ <registro>
+  <nombre>Arianna</nombre>
+  <paterno>Munguia</paterno>
+  <materno></materno>
+  <edad>22</edad>
+  <ocupacion>Enfermera</ocupacion>
+ </registro>
+ 
+ <registro>
+  <nombre>Itzel</nombre>
+  <paterno>Medina</paterno>
+  <materno>Chavez</materno>
+  <edad>28</edad>
+  <ocupacion>Doctora</ocupacion>
+ </registro>
+ 
+</personas>

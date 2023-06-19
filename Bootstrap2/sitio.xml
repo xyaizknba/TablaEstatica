@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Estaticas>
+
+  <Menu><Etiqueta>Inicio</Etiqueta></Menu>
+  <Menu><Etiqueta>Login</Etiqueta></Menu>
+  <Menu><Etiqueta>Calendario</Etiqueta></Menu>
+  <Menu><Etiqueta>Factura</Etiqueta></Menu>
+  <Menu><Etiqueta>Pdf</Etiqueta></Menu>
+  <Menu><Etiqueta>Componentes</Etiqueta></Menu>
+  <Menu><Etiqueta>Sumas</Etiqueta></Menu>
+  <Menu><Etiqueta>Graficos</Etiqueta></Menu>
+  <Menu><Etiqueta>Recorrer Registro</Etiqueta></Menu>
+  <Menu><Etiqueta>Datos</Etiqueta></Menu>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Login 1</TituloHtm>
+      <Parrafo1>Login 1</Parrafo1>
+      <Componente>FrmLogin1</Componente>
+      <NombreArchivo>login1.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 2</TituloHtm>
+      <Parrafo1>Login 2</Parrafo1>
+      <Componente>FrmLogin2</Componente>
+      <NombreArchivo>login2.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 3</TituloHtm>
+      <Parrafo1>Login 3</Parrafo1>
+      <Componente>FrmLogin3</Componente>
+      <NombreArchivo>login3.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 4</TituloHtm>
+      <Parrafo1>Login 4</Parrafo1>
+      <Componente>FrmLogin4</Componente>
+      <NombreArchivo>login4.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 5</TituloHtm>
+      <Parrafo1>Login 5</Parrafo1>
+      <Componente>FrmLogin5</Componente>
+      <NombreArchivo>login5.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 6</TituloHtm>
+      <Parrafo1>Login 6</Parrafo1>
+      <Componente>FrmLogin6</Componente>
+      <NombreArchivo>login6.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Login 7</TituloHtm>
+      <Parrafo1>Login 7</Parrafo1>
+      <Componente>FrmLogin7</Componente>
+      <NombreArchivo>login7.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Calendario</TituloHtm>
+      <Parrafo1>Calendario</Parrafo1>
+      <Componente>ArmCalendario</Componente>
+      <NombreArchivo>calendario.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Factura 1</TituloHtm>
+      <Parrafo1>Factura 1</Parrafo1>
+      <Componente>Factura1</Componente>
+      <NombreArchivo>factura1.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Factura 2</TituloHtm>
+      <Parrafo1>Factura 2</Parrafo1>
+      <Componente>Factura2</Componente>
+      <NombreArchivo>factura2.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Factura XML</TituloHtm>
+      <Parrafo1>Factura XML</Parrafo1>
+      <Componente>FacturaXml</Componente>
+      <NombreArchivo>facturaXml.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Captura Pdf 1</TituloHtm>
+      <Parrafo1>Captura Pdf 1</Parrafo1>
+      <Componente>CapturaPdf1-6</Componente>
+      <NombreArchivo>capturaPdf1.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Captura Pdf 2</TituloHtm>
+      <Parrafo1>Captura Pdf 2</Parrafo1>
+      <Componente>CapturaPdf2-4</Componente>
+      <NombreArchivo>capturaPdf2.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Accordion</TituloHtm>
+      <Parrafo1>Accordion</Parrafo1>
+      <Componente>Accordion-8</Componente>
+      <NombreArchivo>accordion.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Imagen y Parrafo</TituloHtm>
+      <Parrafo1>Imagen y Parrafo</Parrafo1>
+      <Componente>ImagenParrafoAlt-6</Componente>
+      <NombreArchivo>imagen-parrafo.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Carousel</TituloHtm>
+      <Parrafo1>Carousel</Parrafo1>
+      <Componente>Carousel-8</Componente>
+      <NombreArchivo>carousel.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Suma 5</TituloHtm>
+      <Parrafo1>Suma 5</Parrafo1>
+      <Componente>SumaCantidades-5</Componente>
+      <NombreArchivo>suma1.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Suma 6</TituloHtm>
+      <Parrafo1>Suma 6</Parrafo1>
+      <Componente>SumaCantidades-6</Componente>
+      <NombreArchivo>suma2.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Grafica XML</TituloHtm>
+      <Parrafo1>Grafica XML</Parrafo1>
+      <Componente>GraficaBarrasVerticalXml</Componente>
+      <NombreArchivo>graficaXml.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Grafica Json</TituloHtm>
+      <Parrafo1>Grafica Json</Parrafo1>
+      <Componente>GraficaPastelJson</Componente>
+      <NombreArchivo>graficaPastelJson.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Grafica XML</TituloHtm>
+      <Parrafo1>Grafica XML</Parrafo1>
+      <Componente>GraficaLineaXml</Componente>
+      <NombreArchivo>graficaLineaXml.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Datos Json</TituloHtm>
+      <Parrafo1>Datos Json</Parrafo1>
+      <Componente>RecorrerDatosJson</Componente>
+      <NombreArchivo>datosJson.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Datos XML</TituloHtm>
+      <Parrafo1>Datos XML</Parrafo1>
+      <Componente>RecorrerDatosXml</Componente>
+      <NombreArchivo>datosXml.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Datos CSV</TituloHtm>
+      <Parrafo1>Datos CSV</Parrafo1>
+      <Componente>RecorrerDatosCsv</Componente>
+      <NombreArchivo>datosCsv.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+  <SubMenus>
+
+    <SubMenu>
+      <TituloHtm>Tabla Datos Json</TituloHtm>
+      <Parrafo1>Tabla Datos Json</Parrafo1>
+      <Componente>JsonDat-5</Componente>
+      <NombreArchivo>tablaDatosJson.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Tabla Datos Xml</TituloHtm>
+      <Parrafo1>Tabla Datos Xml</Parrafo1>
+      <Componente>Pdf1RegXml-5</Componente>
+      <NombreArchivo>tabladatosXml.htm</NombreArchivo>
+    </SubMenu>
+
+    <SubMenu>
+      <TituloHtm>Tabla Html</TituloHtm>
+      <Parrafo1>Tabla Html</Parrafo1>
+      <Componente>TableHtml-4-3</Componente>
+      <NombreArchivo>tablaHtml.htm</NombreArchivo>
+    </SubMenu>
+
+  </SubMenus>
+
+
+
+</Estaticas>
