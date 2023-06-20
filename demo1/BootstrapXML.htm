@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><head><title>Framework Bootstrap</title><style> .tdSubM{background-color:#E0FFFF} .Leng{font-size:x-large} .sTextSubMnu{font-size:large;color:blue} </style>
+<script>
+let aNuk=new Array(0,1,2,3,4,5,6,7,8,9),iNumeroMenus=10,iNumeroSubMenus=5,blnVerUrl=false; if(Ar82("iMenus").length > 0 && Ar82("iSubMenus").length > 0){ iNumeroMenus=Ar83("iMenus") ,iNumeroSubMenus=Ar83("iSubMenus"); } else { iNumeroMenus=Number(window.prompt("Numero Maximo de Menus:","10")) ,iNumeroSubMenus=Number(window.prompt("Numero Maximo de Sub-Menus:","5")); blnVerUrl=true; }
+function Ar3(V){let Y=0,b,c;for(b=0;b<V.length;b++){for(c=0;c<aNuk.length;c++){if(V.substr(b,1)==aNuk[c]){Y++;}}}return Y;}
+function Ar8(S){return(S.length==Ar3(S)?true:false);}
+function Ar82(name){name=name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");let regex=new RegExp("[\\?&]"+name+"=([^&#]*)"),results=regex.exec(location.search);return results === null?"":decodeURIComponent(results[1].replace(/\+/g," "));}
+function Ar83(a){let n=0,x=Ar82(a);if(x.length>0){n=(Ar8(x)?Number(x):0);}return n;}
+function Ar200(i,v){if(i.length>0 && document.getElementById(i)!==null){document.getElementById(i).value=v;}}
+function Ar201(i,v){if(i.length>0 && document.getElementById(i)!==null){document.getElementById(i).innerHTML=v;}}
+function PonerParrafo(iMun,iSub){if(document.getElementById(("tp"+iMun+"_"+iSub)).value.length === 0){Ar200(("tp"+iMun+"_"+iSub), document.getElementById(("tit"+iMun+"_"+iSub)).value);}}
+function Componente(M,S){
+ let s="<select id=\"cboComp"+M+"_"+S+"\">";
+   s+="<option value=\"0\">Selecciona ..</option>";
+   s+="<option value=\"1\">FrmLogin1</option><option value=\"2\">FrmLogin2</option><option value=\"3\">FrmLogin3</option><option value=\"4\">FrmLogin4</option><option value=\"5\">FrmLogin5</option><option value=\"6\">FrmLogin6</option><option value=\"7\">FrmLogin7</option>";
+   s+="<option value=\"8\">ArmCalendario</option>"; 
+   s+="<option value=\"9\">Factura1</option><option value=\"10\">Factura2</option><option value=\"11\">FacturaJson</option><option value=\"12\">FacturaXml</option>";
+   s+="<option value=\"13\">TableHtml</option>";
+   s+="<option value=\"14\">TableHtml-iRenglones-iColumnas</option>";
+   s+="<option value=\"15\">TableHtmlRegistro</option>";
+   s+="<option value=\"16\">TableHtmlRegistro-iCampos</option>";
+   s+="<option value=\"17\">CapturaPdf1</option>";
+   s+="<option value=\"18\">CapturaPdf1-iCampos</option>";
+   s+="<option value=\"19\">CapturaPdf2</option>";
+   s+="<option value=\"20\">CapturaPdf2-iCampos</option>";
+   s+="<option value=\"21\">Carousel</option>";
+   s+="<option value=\"22\">Carousel-iMages</option>";
+   s+="<option value=\"23\">Accordion</option>";
+   s+="<option value=\"24\">Accordion-iParrafos</option>";
+   s+="<option value=\"50\">Accordion JSTL Sql</option>";
+   s+="<option value=\"51\">Accordion Php MySql</option>";
+   s+="<option value=\"52\">Accordion Php Pdo</option>";
+   s+="<option value=\"53\">Accordion Php Xml</option>";
+   s+="<option value=\"54\">Accordion Php Json</option>";
+   s+="<option value=\"55\">Accordion JavaScript (Ajax) Xml</option>";
+   s+="<option value=\"56\">Accordion JavaScript (Ajax) Json</option>";
+   s+="<option value=\"25\">SumaCantidades</option>";
+   s+="<option value=\"26\">SumaCantidades-iNumeros</option>"; 
+   s+="<option value=\"27\">FrmContacto1</option><option value=\"28\">FrmContacto2</option><option value=\"29\">FrmContacto3</option>";
+   s+="<option value=\"30\">ImagenParrafoAlt</option>";
+   s+="<option value=\"31\">ImagenParrafoAlt-iNumImg</option>";
+   s+="<option value=\"-1\"><b class=\"Leng\">---------------  PHP  ---------------</b></option>"; 
+   s+="<option value=\"32\">TablaDatosPhp-iNumCampos</option>";
+   s+="<option value=\"35\">PhpOrdFlecha</option>";
+   s+="<option value=\"36\">PhpOrdFlecha-iNumCampos</option>";
+   s+="<option value=\"40\">PhpOrdSelect</option>";
+   s+="<option value=\"41\">PhpOrdSelect-iNumCampos</option>";
+   s+="<option value=\"44\">PhpVer1Registro-iNumCampos</option>";
+   s+="<option value=\"-2\"><b class=\"Leng\">---------------  JSTL  ---------------</b></option>";
+   s+="<option value=\"33\">TablaDatosJstl-iNumCampos</option>";
+   s+="<option value=\"37\">JstlOrdFlecha</option>";
+   s+="<option value=\"38\">JstlOrdFlecha-iNumCampos</option>";
+   s+="<option value=\"42\">JstlOrdSelect</option>";
+   s+="<option value=\"43\">JstlOrdSelect-iNumCampos</option>";
+   s+="<option value=\"45\">JstlVer1Registro-iNumCampos</option>";
+   s+="<option value=\"-3\"><b class=\"Leng\">---------------  NodeJs  ---------------</b></option>";
+   s+="<option value=\"34\">TablaDatosNode-iNumCampos-sNomArcSinExte</option>";
+   s+="<option value=\"39\">NodeOrdFlecha-iNumCampos-sNomArcSinExte</option>";
+   s+="<option value=\"46\">Pdf1RegJson-iNumCampos</option>";
+   s+="<option value=\"47\">Pdf1RegXml-iNumCampos</option>";
+   s+="<option value=\"48\">JsonDat-iNumCampos</option>";
+   s+="<option value=\"49\">XmlDat-iNumCampos</option>";
+   s+="<option value=\"-4\"><b class=\"Leng\">---------------  Graficas  ---------------</b></option>";
+   s+="<option value=\"57\">GraficaBarrasVerticalJson</option>";
+   s+="<option value=\"58\">GraficaBarrasHorizontalJson</option>";
+   s+="<option value=\"59\">GraficaPastelJson</option>";
+   s+="<option value=\"60\">GraficaLineaJson</option>";
+   
+   s+="<option value=\"61\">GraficaBarrasVerticalXml</option>";
+   s+="<option value=\"62\">GraficaBarrasHorizontalXml</option>";
+   s+="<option value=\"63\">GraficaPastelXml</option>";
+   s+="<option value=\"64\">GraficaLineaXml</option>";
+   
+   s+="<option value=\"65\">GraficaBarrasVerticalPhpPdo</option>";
+   s+="<option value=\"66\">GraficaBarrasHorizontalPhpPdo</option>";
+   s+="<option value=\"67\">GraficaPastelPhpPdo</option>";
+   s+="<option value=\"68\">GraficaLineaPhpPdo</option>";   
+   s+="<option value=\"69\">GraficaBarrasVerticalPhpMySql</option>";
+   s+="<option value=\"70\">GraficaBarrasHorizontalPhpMySql</option>";
+   s+="<option value=\"71\">GraficaPastelPhpMySql</option>";
+   s+="<option value=\"72\">GraficaLineaPhpMySql</option>";
+   s+="<option value=\"73\">GraficaBarrasVerticalJstl</option>";
+   s+="<option value=\"74\">GraficaBarrasHorizontalJstl</option>";
+   s+="<option value=\"75\">GraficaPastelJstl</option>";
+   s+="<option value=\"76\">GraficaLineaJstl</option>";
+   s+="<option value=\"77\">GraficaBarrasVerticalJdbc</option>";
+   s+="<option value=\"78\">GraficaBarrasHorizontalJdbc</option>";
+   s+="<option value=\"79\">GraficaPastelJdbc</option>";
+   s+="<option value=\"80\">GraficaLineaJdbc</option>";
+   s+="<option value=\"81\">GraficaBarrasVerticalJsp</option>";
+   s+="<option value=\"82\">GraficaBarrasHorizontalJsp</option>";
+   s+="<option value=\"83\">GraficaPastelJsp</option>";
+   s+="<option value=\"84\">GraficaLineaJsp</option>";
+   
+   s+="<option value=\"-5\"><b class=\"Leng\">---------------  Recorrer Registro Individual Ajax  ---------------</b></option>";
+   s+="<option value=\"85\">RecorrerDatosJson</option>";
+   s+="<option value=\"86\">RecorrerDatosXml</option>";
+   s+="<option value=\"87\">RecorrerDatosCsv</option>";
+
+   
+ s+="</select>";
+ return s;
+}
+function cmdGenerar_onClick(){
+ let sMnu,sSubM,sSubT,sSubP,sCboId,sP1,sP2,s="";
+ s+="<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<Estaticas>\n\n";
+ s+="  <Menu><Etiqueta>"+document.getElementById("txtInicio").value+"</Etiqueta></Menu>\n";
+ for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){sMnu="txtMnu"+iMnuX;if(document.getElementById(sMnu).value.length>0){s+="  <Menu><Etiqueta>"+document.getElementById(sMnu).value+"</Etiqueta></Menu>\n";}}
+ s+="\n\n\n";
+ for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){
+  sMnu = "txtMnu" + iMnuX;
+  if(document.getElementById(sMnu).value.length>0){
+    s+="  <SubMenus>\n\n";
+    for(let iTbl=1;iTbl<=iNumeroSubMenus;iTbl++){
+     sSubM="tNomArc"+iMnuX+"_"+iTbl;
+     sSubT="tit"+iMnuX+"_"+iTbl;
+     sSubP="tp"+iMnuX+"_"+iTbl;
+     sCboId="cboComp"+iMnuX+"_"+iTbl;
+     sP1="tPa1_"+iMnuX+"_"+iTbl;
+     sP2="tPa2_"+iMnuX+"_"+iTbl;
+     if(document.getElementById(sSubM).value.length>0){
+        s+="    <SubMenu>\n";
+        s+="      <TituloHtm>"+document.getElementById(sSubT).value+"</TituloHtm>\n";
+        s+="      <Parrafo1>"+document.getElementById(sSubP).value+"</Parrafo1>\n";
+        s+="      <Componente>"+TipoComponente(document.getElementById(sCboId).value, document.getElementById(sP1).value, document.getElementById(sP2).value  )+"</Componente>\n";
+        s+="      <NombreArchivo>"+document.getElementById(sSubM).value+"</NombreArchivo>\n";
+        s+="    </SubMenu>\n\n";
+     }
+    }
+    s+="  </SubMenus>\n\n\n\n";
+  }
+ }
+ s+="</Estaticas>\n"; 
+ Ar200("txtCodigo",s);
+ document.frm.txtCodigo.select(); document.execCommand("copy");
+}
+function TipoComponente(iTiCom,iRen,iCol){
+ let s="";
+ switch(Number(iTiCom)){
+  case 0:{s="";}break;
+  case 1:{s="FrmLogin1";}break;
+  case 2:{s="FrmLogin2";}break;
+  case 3:{s="FrmLogin3";}break;
+  case 4:{s="FrmLogin4";}break;
+  case 5:{s="FrmLogin5";}break;
+  case 6:{s="FrmLogin6";}break;
+  case 7:{s="FrmLogin7";}break;
+  case 8:{s="ArmCalendario";}break;
+  case 9:{s="Factura1";}break;
+  case 10:{s="Factura2";}break;
+  case 11:{s="FacturaJson";}break;
+  case 12:{s="FacturaXml";}break;
+  case 13:{s="TableHtml";}break;
+  case 14:{s="TableHtml-"+iRen+"-"+iCol;}break;
+  case 15:{s="TableHtmlRegistro";}break;
+  case 16:{s="TableHtmlRegistro-"+iRen;}break;
+  case 17:{s="CapturaPdf1";}break;
+  case 18:{s="CapturaPdf1-"+iRen;}break;
+  case 19:{s="CapturaPdf2";}break;
+  case 20:{s="CapturaPdf2-"+iRen;}break;
+  case 21:{s="Carousel";}break;
+  case 22:{s="Carousel-"+iRen;}break;
+  case 23:{s="Accordion";}break;
+  case 24:{s="Accordion-"+iRen;}break;
+  case 25:{s="SumaCantidades";}break;
+  case 26:{s="SumaCantidades-"+iRen;}break;
+  case 27:{s="FrmContacto1";}break;
+  case 28:{s="FrmContacto2";}break;
+  case 29:{s="FrmContacto3";}break;
+  case 30:{s="ImagenParrafoAlt";}break;
+  case 31:{s="ImagenParrafoAlt-"+iRen;}break;
+  case 32:{s="TablaDatosPhp-"+iRen;}break;
+  case 33:{s="TablaDatosJstl-"+iRen;}break;
+  case 34:{s="TablaDatosNode-"+iRen+"-"+iCol;}break;
+  case 35:{s="PhpOrdFlecha";}break;
+  case 36:{s="PhpOrdFlecha-"+iRen;}break;
+  case 37:{s="JstlOrdFlecha";}break;
+  case 38:{s="JstlOrdFlecha-"+iRen;}break;
+  case 39:{s="NodeOrdFlecha-"+iRen+"-"+iCol;;}break;
+  case 40:{s="PhpOrdSelect";}break;
+  case 41:{s="PhpOrdSelect-"+iRen;}break;
+  case 42:{s="JstlOrdSelect";}break;
+  case 43:{s="JstlOrdSelect-"+iRen;}break;
+  case 44:{s="PhpVer1Registro-"+iRen;}break;
+  case 45:{s="JstlVer1Registro-"+iRen;}break;
+  case 46:{s="Pdf1RegJson-"+iRen;}break;
+  case 47:{s="Pdf1RegXml-"+iRen;}break;
+  case 48:{s="JsonDat-"+iRen;}break;
+  case 49:{s="XmlDat-"+iRen;}break;
+  case 50:{s="JstlAccordionSql";}break;
+  case 51:{s="PhpAccordionMySql";}break;
+  case 52:{s="PhpAccordionPdo";}break;
+  case 53:{s="PhpAccordionXml";}break;
+  case 54:{s="PhpAccordionJson";}break;
+  case 55:{s="JsAccordionXml";}break;
+  case 56:{s="JsAccordionJson";}break;
+  case 57:{s="GraficaBarrasVerticalJson";}break;
+  case 58:{s="GraficaBarrasHorizontalJson";}break;
+  case 59:{s="GraficaPastelJson";}break;
+  case 60:{s="GraficaLineaJson";}break;
+  
+  case 61:{s="GraficaBarrasVerticalXml";}break;
+  case 62:{s="GraficaBarrasHorizontalXml";}break;
+  case 63:{s="GraficaPastelXml";}break;
+  case 64:{s="GraficaLineaXml";}break;
+
+  case 65:{s="GraficaBarrasVerticalPhpPdo";}break;
+  case 66:{s="GraficaBarrasHorizontalPhpPdo";}break;
+  case 67:{s="GraficaPastelPhpPdo";}break;
+  case 68:{s="GraficaLineaPhpPdo";}break;
+  case 69:{s="GraficaBarrasVerticalPhpMySql";}break;
+  case 70:{s="GraficaBarrasHorizontalPhpMySql";}break;
+  case 71:{s="GraficaPastelPhpMySql";}break;
+  case 72:{s="GraficaLineaPhpMySql";}break;
+  case 73:{s="GraficaBarrasVerticalJstl";}break;
+  case 74:{s="GraficaBarrasHorizontalJstl";}break;
+  case 75:{s="GraficaPastelJstl";}break;
+  case 76:{s="GraficaLineaJstl";}break;
+  case 77:{s="GraficaBarrasVerticalJdbc";}break;
+  case 78:{s="GraficaBarrasHorizontalJdbc";}break;
+  case 79:{s="GraficaPastelJdbc";}break;
+  case 80:{s="GraficaLineaJdbc";}break;    
+  case 81:{s="GraficaBarrasVerticalJsp";}break;
+  case 82:{s="GraficaBarrasHorizontalJsp";}break;
+  case 83:{s="GraficaPastelJsp";}break;
+  case 84:{s="GraficaLineaJsp";}break;
+  
+  case 85:{s="RecorrerDatosJson";}break;
+  case 86:{s="RecorrerDatosXml";}break;
+  case 87:{s="RecorrerDatosCsv";}break;
+    
+ }
+ return s;
+}
+</script></head><body bgcolor="#DCDCDC"><div align="center" id="Codigo"></div><h1 align="center">Programador: Armando Ramos</h1>
+<script>
+let sCod="";
+if(blnVerUrl){ sCod+="<p>Indica el Numero Maximo de Menus y el Numero Maximo de Submenus agrega los siguientes parametros a la URL:</p><h2><a href=\""+location.href+"?iMenus=2&iSubMenus=10\">?iMenus=<font color=\"red\">2</font>&iSubMenus=<font color=\"red\">10</font></a></h2>"; }
+sCod+="<form name=\"frm\"><table>\n";
+sCod+="<tr><td>Texto para la Pagina de Inicio index: <input type=\"text\" id=\"txtInicio\" value=\"Inicio\" size=\"20\"></td></tr>\n";
+for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){
+ sCod+="<tr align=\"center\"><th bgcolor=\"#ADD8E6\"><h1>Texto Menu "+iMnuX+":<input type=\"text\" id=\"txtMnu"+iMnuX+"\" size=\"30\"></h1></th></tr>\n";
+ for(let iTbl=1;iTbl<=iNumeroSubMenus;iTbl++){
+  sCod+="<tr align=\"center\" class=\"tdSubM\"><td class=\"sTextSubMnu\">SubMenu: "+ iTbl +" del Menu: "+iMnuX+"</td></tr>";
+  sCod+="<tr class=\"tdSubM\"><td>Nombre Archivo:<input type=\"text\" size=\"20\" id=\"tNomArc"+iMnuX+"_"+iTbl+"\"> Titulo HTM:<input type=\"text\" size=\"20\" id=\"tit"+iMnuX+"_"+iTbl+"\" onblur=\"PonerParrafo("+iMnuX+","+iTbl+")\"> Parrafo :<input type=\"text\" size=\"20\" id=\"tp"+iMnuX+"_"+iTbl+"\"></td></tr>";
+  sCod+="<tr class=\"tdSubM\"><td>Componente: "+Componente(iMnuX,iTbl)+" Parametro 1:<input type=\"text\" id=\"tPa1_"+iMnuX+"_"+iTbl+"\"> Parametro 2:<input type=\"text\" id=\"tPa2_"+iMnuX+"_"+iTbl+"\"></td></tr>";
+  sCod+="<tr><td><br></td></tr>";
+ }
+}
+sCod+="<tr align=\"center\"><td><input type=\"button\" value=\"Generar\" onclick=\"cmdGenerar_onClick()\"></td></tr><tr align=\"center\"><td><textarea rows=\"20\" cols=\"120\" id=\"txtCodigo\" name=\"txtCodigo\"></textarea></td></tr>\n</table></form>";
+Ar201("Codigo",sCod);
+</script></body></html>
