@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Armando Ramos M." /><meta name="description" content="Atributos HTM - Armando Ramos M." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"><link href="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v4/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+  <title>Inicio</title>
+ </head>
+  <body>
+    <div id="MnuJsNavBar"></div>
+    <h1 class="container">Bootstrap</h1>
+    <div class="container"><h2 align="right"><span reloj-2="5" id="fecha-hora" sp="4" ord="1"></span></h2></div>
+    
+    <span id="NotificacionUnica" ar-notif="4" nom-ls="arm2" titulo="Notificacion 1 vez" parrafo="Mensaje" imagen=""></span> 
+
+    <div align="center">
+      <h3>Imagen Aleatoria</h3>
+     <img src="https://xyaizknba.github.io/CatalogoHtml/images/nokia6600_2.jpg" img-rand-url="https://xyaizknba.github.io/CatalogoHtml/images/" img-rand="megamix_1_m.jpg,walkman_1.jpg,hpstream7_1.jpg,cerveza3_m.jpg,pyramix_3_m.jpg,super_nintendo_4_m.jpg,nokia6600_2.jpg" />
+    </div>  
+    <br>
+    <hr>
+
+
+  <div class="container">
+  
+    <h3><span sal-dia="Buenos Dias" sal-tar="Buenas Tardes" sal-noc="Buenas Noches"></span>: Este mes Tiene <font style="color:blue"><span max-dias-mes-actual="1"></span></font> Dias y Faltan <font style="color:blue"><span dias-para-terminar-mes="1"></font> Dias para que termine el Mes.</span></h3>
+    <div id="calendario" arX51="" arX52="" arX53="" arX54="diaHoy" arX55="otrosDias" arX56="sMesAnio" arX57="sNomDiaSem" arX58="2" arX59="1" arX510="40%"></div>
+    <hr>
+    <h3>Dias desde la ultima modificacion de esta pagina: <font style="color:#8B0000"><span id="diasDesdeMod" mk="1"></span></font></h3>
+    <hr>
+    <h3>Has visitado esta pagina <font style="color:red"><span visit="1"></span></font> veces desde el Dia <font style="color:#8B0000"><span id="idPrimerAcceso" data-paccess1="dte1Acces" data-paccess2="5" data-paccess3="-"></span></font>.</h3>
+ 	  <span cal-htm-1="diaHoy" cal-htm-2="otrosDias" cal-htm-3="sMesAnio" cal-htm-4="sNomDiaSem" cal-htm-5="40%" cal-htm-6="0" cal-htm-7="2" cal-htm-8="dte1Acces" cal-htm-9="2" cal-htm-0="Jayden" ></span> <div id="Jayden"></div>     
+    <hr>
+    <h3>Faltan <font style="color:blue"><span to-days="1">2026-08-08</span></font> dias para el <font style="color:#8B0000">8 de Agosto de 2026</font> dia de mi cumplea&ntilde;os.</h3>
+    <hr>
+    <h3>La siguiente cantidad escrita --&gt;<font style="color:#8B0000"><span num2let="1">213786.50</span></font> se obtubo con la siguiente etiqueta  --&gt; <font style="color:#8B0000">&lt;span num2let="1"&gt;213786.50&lt;/span&gt;</font></h3>    
+    <hr>
+    <h3>Texto en Ciclo --&gt;<span style="color:blue" id="equiposNBA" txt-cambio="Chicago,Toronto,Sacramento,Denver" txt-cambio-del="," txt-cambio-vel="2"></span></h3> 
+
+    <span fuera-de-frame="1"></span>
+    
+    <hr>
+    
+    <form name="f" id="f" autocomplete="off">
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="Ctrl1"><i class="bi bi-envelope-fill"></i> Email</label>
+          <input type="email" name="Ctrl1" id="Ctrl1" class="form-control" maxlength="150" placeholder="Email" kitana="El e-mail es incorrecto ingreselo nuevamente." kitana-i="m_err1" kitana-o="" />
+          <h3 id="m_err1" class="text-danger"></h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label for="Ctrl2"><i class="bi bi-123"></i> C.P</label></div>
+        <div class="col"><input type="text" name="Ctrl2" id="Ctrl2" maxlength="5" class="form-control" placeholder="C.P" terminator-1="m_err2" terminator-2="El Codigo Postal son 5 Numeros" terminator-3="Dato Obligatorio." /></div>
+      </div>
+      <h3 class="container text-danger" id="m_err2"></h3>
+
+      <div class="container"><b>Ingresa 2 Numeros (Se Multiplicaran)</b></div>
+      <div class="row">
+        <div class="col"><input type="text" class="form-control" id="txtNumero3_1" name="txtNumero3_1" maxlength="10" placeholder="Cantidad 1" /></div>
+        <div class="col"><input type="text" class="form-control" id="txtNumero3_2" name="txtNumero3_2" maxlength="10" placeholder="Precio 2" /></div>
+      </div>
+      <div class="row">
+       <div class="col"><b><span id="m_err3" data-mult1="txtNumero3_1" data-mult2="txtNumero3_2" data-mult3="txtResMul3" data-mult4="0"></span></b></div>
+       <div class="col"><b id="txtNumero3_1_ltr"></b></div>
+      </div>
+      <input type="hidden" name="txtResMul3" id="txtResMul3" /><br /><br />
+
+      <!-- Inicio Sumar Numeros -->
+      <hr>
+      <p class="container" align="center"><b>Sumar Numeros</b></p>
+      <div class="row">
+        <div class="col"><label for="Ctrl41"><i class="bi bi-123"></i> <b>Numero 1</b></label></div>
+        <div class="col"><input type="text" name="Ctrl41" id="Ctrl41" class="form-control" maxlength="10" placeholder="Numero 1" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl42"><i class="bi bi-123"></i> <b>Numero 2</b></label></div>
+        <div class="col"><input type="text" name="Ctrl42" id="Ctrl42" class="form-control" maxlength="10" placeholder="Numero 2" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl43"><i class="bi bi-123"></i> <b>Numero 3</b></label></div>
+        <div class="col"><input type="text" name="Ctrl43" id="Ctrl43" class="form-control" maxlength="10" placeholder="Numero 3" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl44"><i class="bi bi-123"></i> <b>Numero 4</b></label></div>
+        <div class="col"><input type="text" name="Ctrl44" id="Ctrl44" class="form-control" maxlength="10" placeholder="Numero 4" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl45"><i class="bi bi-123"></i> <b>Numero 5</b></label></div>
+        <div class="col"><input type="text" name="Ctrl45" id="Ctrl45" class="form-control" maxlength="10" placeholder="Numero 5" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl46"><i class="bi bi-123"></i> <b>Numero 6</b></label></div>
+        <div class="col"><input type="text" name="Ctrl46" id="Ctrl46" class="form-control" maxlength="10" placeholder="Numero 6" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><b>Suma Total: </b></div>
+        <div class="col"><span id="Ctrl4_R" arX61="Ctrl4" arX62="Ctrl4" arX63="1" arX64="6" arX65="1"></span></div>
+      </div>
+      <p align="center"><b id="Ctrl4_mda"></b></p>
+      <input type="hidden" name="Ctrl4" id="Ctrl4">
+      <hr>
+      <!-- Fin Sumar Numeros -->
+
+
+      <div class="container"><label for="cboCtrl5_Dia"><i class="bi bi-calendar-month-fill"></i> Fecha Nacimiento</label><input type="hidden" name="Ctrl5" id="Ctrl5" /></div>
+      <div class="row">
+        <div class="col" id="i_Ctrl5Dia"></div>
+        <div class="col" id="i_Ctrl5Mes"></div>
+        <div class="col" id="i_Ctrl5Anio"></div>
+      </div>
+      <span duke="Ctrl5" duke1="form-control" duke2="Fecha Incorrecta" duke3="Obligatoria" duke4="1975" duke5="2040" duke6="A&ntilde;o" duke7="Mes" duke8="Dia" duke9="m_err5"></span>
+      <h3><span id="m_err5" class="container text-danger"></span></h3>
+      <div class="container">
+        <input type="button" id="cmdCtrl5_Hoy" value="Seleccionar Fecha Hoy" class="col-12 btn btn-info" Select-Fecha-Hoy="Ctrl5_" lblError="m_err5" Fecha="Ctrl5" />
+      </div><br /><br />
+
+
+      <div class="row">
+        <div class="col"><label for="Ctrl6"><i class="bi bi-geo-alt-fill"></i> Estado</label></div>
+        <div class="col">
+          <select name="Ctrl6" id="Ctrl6" lucas="m_err6" lucas1="Dato Obligatorio." class="form-control">
+            <option value="0"></option>
+            <option value="1">Aguascalientes</option>
+            <option value="2">Baja California</option>
+            <option value="3">Baja California Sur</option>
+            <option value="4">Campeche</option>
+            <option value="5">Coahuila</option>
+            <option value="6">Colima</option>
+            <option value="7">Chiapas</option>
+            <option value="8">Chihuahua</option>
+            <option value="9">Ciudad de M&eacute;xico (CDMX)</option>
+            <option value="10">Durango</option>
+            <option value="11">Guanajuato</option>
+            <option value="12">Guerrero</option>
+            <option value="13">Hidalgo</option>
+            <option value="14">Jalisco</option>
+            <option value="15">Estado de M&eacute;xico</option>
+            <option value="16">Michoac&aacute;n</option>
+            <option value="17">Morelos</option>
+            <option value="18">Nayarit</option>
+            <option value="19">Nuevo Le&oacute;n</option>
+            <option value="20">Oaxaca</option>
+            <option value="21">Puebla</option>
+            <option value="22">Quer&eacute;taro</option>
+            <option value="23">Quintana Roo</option>
+            <option value="24">San Luis Potos&iacute;</option>
+            <option value="25">Sinaloa</option>
+            <option value="26">Sonora</option>
+            <option value="27">Tabasco</option>
+            <option value="28">Tamaulipas</option>
+            <option value="29">Tlaxcala</option>
+            <option value="30">Veracruz</option>
+            <option value="31">Yucat&aacute;n</option>
+            <option value="32">Zacatecas</option>
+          </select>
+        </div>
+      </div>
+      <h3 id="m_err6" class="container text-danger"></h3>
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="Ctrl7"> <i class="bi bi-chat-right-dots-fill"></i> Comentario</label>
+          <textarea class="form-control" name="Ctrl7" id="Ctrl7" class="form-control" maxlength="200" placeholder="Comentario" kenshi="1" kenshi-2="m_err7" kenshi-3="Dato Obligatorio." kenshi-4="10" kenshi-5="Minimo de Caracteres 10"></textarea>
+          <h3 id="m_err7" class="text-danger"></h3>
+        </div>
+      </div>
+
+      <!-- Inicio Porcentaje Numeros -->
+      <hr>
+      <p class="container" align="center"><b>Porcentaje Numeros</b></p>
+      <div class="row">
+        <div class="col"><label for="Ctrl81"><i class="bi bi-123"></i> <b>Numero 1</b></label></div>
+        <div class="col"><input type="text" name="Ctrl81" id="Ctrl81" class="form-control" maxlength="10" placeholder="Numero 1" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl82"><i class="bi bi-123"></i> <b>Numero 2</b></label></div>
+        <div class="col"><input type="text" name="Ctrl82" id="Ctrl82" class="form-control" maxlength="10" placeholder="Numero 2" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl83"><i class="bi bi-123"></i> <b>Numero 3</b></label></div>
+        <div class="col"><input type="text" name="Ctrl83" id="Ctrl83" class="form-control" maxlength="10" placeholder="Numero 3" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl84"><i class="bi bi-123"></i> <b>Numero 4</b></label></div>
+        <div class="col"><input type="text" name="Ctrl84" id="Ctrl84" class="form-control" maxlength="10" placeholder="Numero 4" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><b>Porcentaje: </b></div>
+        <div class="col"><span id="Ctrl8_P" arX81="Ctrl8" arX82="Ctrl8" arX83="1" arX84="4" arX85="1"></span></div>
+      </div>
+      <p align="center"><b id="Ctrl8_mda"></b></p>
+      <input type="hidden" name="Ctrl8" id="Ctrl8">
+      <hr>
+      <!-- Fin Porcentaje Numeros -->
+
+
+      <div class="row">
+        <input type="hidden" id="Ctrl9_email_h">
+        <div class="col-lg-12"><label for="Ctrl9"><i class="bi bi-envelope-fill"></i> Email</label></div>
+        <div class="col-lg-12"><input class="form-control" type="text" name="Ctrl9" id="Ctrl9" maxlength="150" placeholder="Email" /></div>
+        <div class="col-lg-12"><input class="form-control" type="text" name="Ctrl9Conf" id="Ctrl9Conf" maxlength="150" placeholder="Email" /></div>
+      </div>
+      <h3><span id="m_err9" class="text-danger" arX01="Ctrl9" arX02="Ctrl9Conf" arX03="La confirmaci&oacute;n del e-mail es incorrecta &oacute; no es un e-mail valido, conf&iacute;rmelo nuevamente." data-obl="El e-mail es Obligatorio."></span></h3>
+
+
+
+
+      <!-- Inicio Numero Maximo -->
+      <hr>
+      <p class="container" align="center"><b>Numero Maximo</b></p>
+      <div class="row">
+        <div class="col"><label for="Ctrl101"><i class="bi bi-123"></i> <b>Numero 1</b></label></div>
+        <div class="col"><input type="text" name="Ctrl101" id="Ctrl101" class="form-control" maxlength="10" placeholder="Numero 1" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl102"><i class="bi bi-123"></i> <b>Numero 2</b></label></div>
+        <div class="col"><input type="text" name="Ctrl102" id="Ctrl102" class="form-control" maxlength="10" placeholder="Numero 2" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><label for="Ctrl103"><i class="bi bi-123"></i> <b>Numero 3</b></label></div>
+        <div class="col"><input type="text" name="Ctrl103" id="Ctrl103" class="form-control" maxlength="10" placeholder="Numero 3" /></div>
+      </div>
+      <div class="row">
+        <div class="col"><b>Maximo: </b></div>
+        <div class="col"><b><span id="sp_Ctrl10" data-max1="Ctrl10" data-max2="1" data-max3="3" data-max4="Ctrl10"></span></b></div>
+      </div>
+      <input type="hidden" name="Ctrl10" id="Ctrl10">
+      <hr>
+      <!-- Fin Numero Maximo -->
+
+
+      <div class="container">
+       <div class="row">
+        <div class="col"><label for="Ctrl11"><i class="bi bi-currency-dollar"></i> <b>Sueldo</b></label></div>
+        <div class="col"><input type="text" name="Ctrl11" id="Ctrl11" class="form-control" maxlength="9" placeholder="Sueldo" fmt-moneda-id-err="m_err11" fmt-moneda="Ctrl11_Moneda" fmt-moneda-ltr="Ctrl11_Escrito" fmt-moneda-min-val="1" fmt-moneda-max-val="9999" fmt-moneda-fuera-rang="Fuera de Limite" fmt-moneda-req="Dato Obligatorio." fmt-moneda-id-err="m_err11" /></div>
+       </div>
+      </div>
+      <p class="container"><b id="Ctrl11_Moneda"></b></p>
+      <p class="container"><b id="Ctrl11_Escrito"></b></p>
+      <p class="container text-danger"><b id="m_err11">Dato Obligatorio.</b></p>
+
+
+      <div class="container"><b>Ingresa 2 Numeros (Se Multiplicaran)</b></div>
+      <div class="row">
+        <div class="col">
+          <select name="Ctrl12_1" id="Ctrl12_1" class="form-control" jayden="1" jayden-1="m_err12" jayden-2="Ctrl12_2" jayden-3="Ctrl12">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+         </select>
+        </div>
+        <div class="col"><input type="text" name="Ctrl12_2" id="Ctrl12_2" class="form-control" value="30" maxlength="10"></div>
+      </div>
+      <div class="row">
+        <div class="col"><b id="m_err12"></b></div>
+        <div class="col"><b id="Ctrl12_1_mon"></b></div>
+      </div>
+      <input type="hidden" name="Ctrl12" id="Ctrl12" /><br /><br/>
+
+
+      <div class="row">
+        <div class="col"><label for="ChkTodos"><b id="lblChkTodos">Agregar Seleccion</b> <b>(Todos)</b></label></div>
+        <div class="col"><input type="checkbox" name="ChkTodos" id="ChkTodos" class="form-check-input" marcar-desmarcar="Ctrl14,Ctrl15,Ctrl16" lbl-marcar-desmarcar="lblChkTodos" marcado="Agregar Seleccion" desmarcado="Quitar Seleccion" /> </div>
+      </div>
+
+      <div class="row">
+        <div class="col"><input type="checkbox" name="Ctrl14" id="Ctrl14" class="form-check-input" lbl-sel="La NBA es la liga mas popular" lbl-no-sel="Basquetboll no Seleccionado" id-lbl-sel="Ctrl14_lbl" /> <label for="Ctrl14"><b>Basquetboll</b></label></div>
+        <div class="col"><b><span id="Ctrl14_lbl"></span></b></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><input type="checkbox" name="Ctrl15" id="Ctrl15" class="form-check-input" lbl-sel="Va a ser el Mundial en Mexico" lbl-no-sel="Mexico Juega Bien Culero el Fuchiboll" id-lbl-sel="Ctrl15_lbl" /> <label for="Ctrl15"><b>Fuchiboll</b></label></div>
+        <div class="col"><b><span id="Ctrl15_lbl"></span></b></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><input type="checkbox" name="Ctrl16" id="Ctrl16" class="form-check-input" lbl-sel="Los Boxeadores eran mejores Antes" lbl-no-sel="El Canelo Tiene Miedo de Pelear con los Mejores" id-lbl-sel="Ctrl16_lbl" /> <label for="Ctrl16"><b>Boxeo</b></label></div>
+        <div class="col"><b><span id="Ctrl16_lbl"></span></b></div>
+      </div>
+
+       <div class="container"><label for="Ctrl17_Dia"><b>Agregar Intervalos (Dias,Meses,A&ntilde;os) a Fecha Actual</b></label></div>
+       <div class="row">
+        <div class="col"><input type="text" name="Ctrl17_Dia" id="Ctrl17_Dia" class="form-control" title="Dias" maxlength="2" placeholder="Dia" /></div>
+        <div class="col"><input type="text" name="Ctrl17_Mes" id="Ctrl17_Mes" class="form-control" title="Meses" maxlength="2" placeholder="Mes" /></div>
+        <div class="col"><input type="text" name="Ctrl17_Anio" id="Ctrl17_Anio" class="form-control" title="Anios" maxlength="2" placeholder="Anio" /></div>
+       </div>
+       <input type="hidden" id="Ctrl17" name="Ctrl17" class="form-control" dte-intv-id="m_err17" dte-intv-dia="Ctrl17_Dia" dte-intv-mes="Ctrl17_Mes" dte-intv-anio="Ctrl17_Anio" dte-intv-fmt="5" />
+       <b id="m_err17"></b><br /><br />
+
+     <label for="Ctrl18"><i class="bi bi-currency-dollar"></i> <b>Precio</b></label>
+      <div class="container">
+       <div class="row">
+        <div class="col"><input type="text" name="Ctrl18" id="Ctrl18" maxlength="9" placeholder="Precio" class="form-control" fmt-moneda-id-err="m_err18" fmt-moneda="Ctrl18_Moneda" fmt-moneda-ltr="Ctrl18_Escrito"  fmt-moneda-min-val="1" fmt-moneda-max-val="999999999" fmt-moneda-fuera-rang="Fuera de Limite" fmt-moneda-req="Dato Obligatorio." /></div>
+        <div class="col"><b id="Ctrl18_Moneda"></b></div>
+       </div>
+      </div>
+      <b id="Ctrl18_Escrito" style="text-transform:capitalize"></b><br>
+      <h3 class="container text-danger" id="m_err18">Dato Obligatorio.</h3>
+
+
+      <div class="container"><label for="cboCtrl19_Dia"><b>Ingresa una Fecha (Futura) Requerida</b></label></div>
+      <input type="hidden" name="Ctrl19" id="Ctrl19" />
+      <div class="row">
+        <div class="col"><select name="cboCtrl19_Dia" id="cboCtrl19_Dia" class="form-control" val-fecha="2" val-fecha-ids="cboCtrl19" val-fecha-req="Dato Obligatorio." val-fecha-incorrecta="Ingresa una Fecha Correcta" val-fecha-hoy-pasada="Ingrese una fecha puede ser la fecha de hoy &oacute; anterior." val-fecha-futura="Ingrese una fecha posterior al d&iacute;a de hoy." val-fecha-id-err="m_err19" val-fecha-id-hid="Ctrl19" Fecha=""><option value="0">Dia Selecciona ...</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></div>
+        <div class="col"><select name="cboCtrl19_Mes" id="cboCtrl19_Mes" class="form-control"><option value="0">Mes Selecciona ...</option><option value="1">Enero</option><option value="2">Febrero</option><option value="3">Marzo</option><option value="4">Abril</option><option value="5">Mayo</option><option value="6">Junio</option><option value="7">Julio</option><option value="8">Agosto</option><option value="9">Septiembre</option><option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option></select></div>
+        <div class="col"><select name="cboCtrl19_Anio" id="cboCtrl19_Anio" class="form-control"><option value="0">A&ntilde;o Selecciona ...</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option></select></div>
+      </div>
+      <h3 class="container text-danger"><b id="m_err19" class="error"></b></h3><br /><br />
+
+
+      <div class="row">
+        <div class="col"><label for="Ctrl20"><i class="bi bi-123"></i> Numero</label></div>
+        <div class="col"><input type="text" name="Ctrl20" id="Ctrl20" class="form-control" placeholder="Numero 9,45,23" enumerado="1" enum-values="Ctrl20Valores" enum-id-err="m_err20" enum-sep="," enum-msg-err="Numero 9,45,23" data-obl="Dato Obligatorio." /></div>
+      </div>
+      <input id="Ctrl20Valores" value="9,45,23">
+      <h3 id="m_err20" class="text-danger"></h3>
+      
+      <div class="row">
+        <div id="Ctrl20_d" class="col-lg-12"></div>
+        <div id="Ctrl20_m" class="col-lg-12" ></div>
+      </div>
+      
+
+
+
+
+
+
+
+      <br/><br/><br/>
+      <div class="row">
+       <div class="col"><label class="form-label" for="txtSegFrm" style="font-weight:bolder;font-size:x-large"><span id="idSuma1"></span>+<span id="idSuma2"></span>=</label></div>
+       <div class="col"><input type="text" name="txtSegFrm" id="txtSegFrm" maxlength="2" class="form-control" act-env1="idSuma1" act-env2="idSuma2" act-env3="txtSegFrm" act-env="chkSegFrm" act-env4="30" /></div>
+      </div>
+      <div class="row">
+       <div class="col"><label for="chkSegFrm">Realiza la Suma y activame para Guardar Datos</label> <input type="checkbox" name="chkSegFrm" id="chkSegFrm" class="form-check-input" arX31="cmdAceptar"></div>
+       <div class="col"><label for="chkBorrar">Activame para Limpiar el Formulario</label> <input type="checkbox" name="chkBorrar" id="chkBorrar" class="form-check-input" data-kung-lao="cmdBorrar" data-kung-lao-1="0" ></div>
+      </div>
+      <div class="row">
+       <div class="col"><input type="button" id="cmdAceptar" class="col-12 btn btn-success" value="Enviar" /></div>
+       <div class="col"><input type="button" id="cmdBorrar" class="col-12 btn btn-danger" value="Limpiar" arX21="0" arX22="Deseas Borrar los datos ingresados." cls-momov="col-12 btn btn-danger" cls-moout="col-12 btn btn-danger" /></div>
+      </div> 
+      <h3 class="container" id="m_err200"></h3>
+
+      <input type="hidden" id="sArFatality" x4="" x5="m_err2,m_err6,m_err11,m_err18,m_err19,m_err20" x6="" x7="m_err1,m_err9" value="m_err3,txtNumero3_1_ltr,Ctrl4_R,Ctrl4_mda,Ctrl8_P,Ctrl8_mda,sp_Ctrl10,Ctrl11_Moneda,Ctrl11_Escrito,Ctrl18_Moneda,Ctrl18_Escrito,Ctrl20_d,Ctrl20_m,m_err200"/>
+    </form>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+
+
+  <h3 class="container">Programador : <span id="prgAR">Armando Ramos M.</span></h3>
+    <div id="FooterX"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v13/ar.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+
+    <script>
+    function Inicializar(){CargaMnuFo();}
+    function Eventos(){ //Coloca aqui tus JS de Inicializacion
+    }
+    function cmdAceptar_onClick(){
+      FrmSumaCheckbox("cmdAceptar","chkSegFrm","txtSegFrm"); //Suma y Checkbox para Guardar los Datos
+
+
+
+    }
+    function LimpMsgErrFrm0(){
+      document.getElementById("cmdBorrar").disabled=true;
+      document.getElementById("cmdAceptar").disabled=true;
+      chkBorrar.checked=false;
+    }
+    
+    </script>
+  </body>
+</html>
