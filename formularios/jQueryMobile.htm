@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="es"><head><title>Formularios Web Sin JavaScript</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Armando Ramos M." /><meta name="description" content="Atributos HTM - Armando Ramos M." />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v4/estilos.css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xyaizknba/ArmandoRamos@v12/ar.js"></script>
+</head>
+ 
+ <body>
+  <div data-role="page">
+  
+   <div data-role="header" data-theme="b" data-position="fixed"><h2>Sin JavaScript</h2></div>
+   <div data-role="content">
+    <div class="container"><h2 align="right"><span reloj-2="5" id="fecha-hora" sp="4" ord="1"></span></h2></div>
+
+    <!-- Inicio Formulario -->
+    <span fuera-de-frame="1"></span>
+    <h3 align="center" style="color:red">Pagina Sin JavaScript</h3>  
+    <form name="f" id="f" autocomplete="off" method="post">
+      <p align="center"><b><span sal-dia="Buenos Dias" sal-tar="Buenas Tardes" sal-noc="Buenas Noches"></span> Ingrese los Siguientes Datos.</b></p>
+
+
+      <label for="Ctrl1"><b>Email</i></label>
+      <input type="hidden" id="Ctrl1_email_h">
+      <input type="text" name="Ctrl1" id="Ctrl1" maxlength="200" placeholder="Email" />
+      <input type="text" name="Ctrl1Conf" id="Ctrl1Conf" maxlength="200" placeholder="Email"/>
+      <b><span id="m_err1" arX01="Ctrl1" arX02="Ctrl1Conf" arX03="La confirmaci&oacute;n del e-mail es incorrecta &oacute; no es un e-mail valido, conf&iacute;rmelo nuevamente." data-obl="El e-mail es Obligatorio." class="error"></span></b>
+      <hr>
+
+      <label for="Ctrl2"><b>C.P</b></label>
+      <input type="text" name="Ctrl2" id="Ctrl2" maxlength="5" placeholder="C.P" terminator-1="m_err2" terminator-2="El Codigo Postal son 5 Numeros" terminator-3="Dato Obligatorio." />
+      <b id="m_err2" class="error"></b>
+      <hr>
+
+      <label for="Ctrl3"><b>Email</b></label>
+      <input type="text" name="Ctrl3" id="Ctrl3" maxlength="200" placeholder="Email" kitana="El e-mail es incorrecto ingreselo nuevamente." kitana-i="m_err3" kitana-o="El e-mail es Obligatorio." />
+      <b id="m_err3" class="error"></b>
+      <hr>
+
+      <b>Ingresa 2 Numeros (Se Multiplicaran)</b>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><input type="text" id="txtNumero4_1" name="txtNumero4_1" maxlength="10" placeholder="Cantidad 1" /></div>
+        <div class="ui-block-b"><input type="text" id="txtNumero4_2" name="txtNumero4_2" maxlength="10" placeholder="Precio 2" /></div>
+      </div>
+      <p><b><span id="m_err4" data-mult1="txtNumero4_1" data-mult2="txtNumero4_2" data-mult3="txtResMul4" data-mult4="0"></span></b></p>
+      <p><b id="txtNumero4_1_ltr"></b></p>
+      <input type="hidden" name="txtResMul4" id="txtResMul4" /><br /><br />
+      <hr>
+
+      <!-- Inicio Sumar Numeros -->
+      <p><b>Sumar Numeros</b></p>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl51"><b>Numero 1</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl51" id="Ctrl51" maxlength="10" placeholder="Numero 1" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl52"><b>Numero 2</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl52" id="Ctrl52" maxlength="10" placeholder="Numero 2" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl53"><b>Numero 3</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl53" id="Ctrl53" maxlength="10" placeholder="Numero 3" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><b>Suma Total: </b></div>
+        <div class="ui-block-b"><span id="Ctrl5_R" arX61="Ctrl5" arX62="Ctrl5" arX63="1" arX64="3" arX65="1"></div>
+      </div>
+      <p><b id="Ctrl5_mda"></b></p>
+      <input type="hidden" name="Ctrl5" id="Ctrl5">
+      <!-- Fin Sumar Numeros -->
+      <br><br><br>
+      <hr>
+
+      <b>Ingresa 2 Numeros (Se Multiplicaran)</b>
+      <div class="ui-grid-a">
+        <div class="ui-block-a">
+          <select name="Ctrl6_1" id="Ctrl6_1" jayden="1" jayden-1="m_err6" jayden-2="Ctrl6_2" jayden-3="Ctrl6">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+         </select>
+        </div>
+        <div class="ui-block-b">
+          <select name="Ctrl6_2" id="Ctrl6_2">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+         </select>
+        </div>
+      </div>
+      <p><span id="m_err6"></span></p>
+      <p><b id="Ctrl6_1_mon"></b></p>
+      <input type="hidden" name="Ctrl6" id="Ctrl6" /><br><br>
+      <hr>
+
+
+
+      <!-- Inicio Porcentaje Numeros -->
+      <p><b>Porcentaje Numeros</b></p>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl71"><b>Numero 1</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl71" id="Ctrl71" maxlength="10" placeholder="Numero 1" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl72"><b>Numero 2</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl72" id="Ctrl72" maxlength="10" placeholder="Numero 2" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl73"><b>Numero 3</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl73" id="Ctrl73" maxlength="10" placeholder="Numero 3" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><b>Porcentaje: </b></div>
+        <div class="ui-block-b"><span id="Ctrl7_P" arX81="Ctrl7" arX82="Ctrl7" arX83="1" arX84="3" arX85="1"></span></div>
+      </div>
+      <p><b id="Ctrl7_mda"></p>
+      <p><input type="hidden" name="Ctrl7" id="Ctrl7"></p>
+      <!-- Fin Porcentaje Numeros -->
+      <br><br><br>
+      <hr>
+
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl8"><b>Sueldo</b></label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl8" id="Ctrl8" maxlength="9" placeholder="Sueldo" fmt-moneda-id-err="m_err8" fmt-moneda="Ctrl8_Moneda" fmt-moneda-ltr="Ctrl8_Escrito" fmt-moneda-min-val="1" fmt-moneda-max-val="9999" fmt-moneda-fuera-rang="Fuera de Limite" fmt-moneda-req="Dato Obligatorio." fmt-moneda-id-err="m_err8" /></div>
+      </div>
+      <p><b id="Ctrl8_Moneda"></b></p>
+      <p><b id="Ctrl8_Escrito"></b></p>
+      <p><b id="m_err8" class="error">Dato Obligatorio.</b></p>
+      <hr>
+      
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl9">Numero :</label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl9" id="Ctrl9" maxlength="4" placeholder="Numero" pct-num="Ctrl9_Pct" pct-opp="+" pct-sgn-mon="Si" pct-aplicado="Ctrl9_PctApp" pct-aplicado-ltra="Ctrl9_PctAppLtra" pct-tot="Ctrl9_PctTol" pct-tot-ltra="Ctrl9_PctTolLtra" pct-id-err="m_err9" pct-num-req="Dato Obligatorio." /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="Ctrl9_Pct">Porcentaje:</label></div>
+        <div class="ui-block-b"><input type="text" name="Ctrl9_Pct" id="Ctrl9_Pct" maxlength="4"></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><b>Porcentaje Aplicado a Sumar:</b> <b id="Ctrl9_PctApp"></b></div>
+        <div class="ui-block-b"><b id="Ctrl9_PctAppLtra"></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><b>Numero Sumar el Porcentaje:</b> <b id="Ctrl9_PctTol"></b></div>
+        <div class="ui-block-b"><b id="Ctrl9_PctTolLtra"></div>
+      </div> 
+      <b id="m_err9" class="error"></b>
+      <br><br>
+      <hr>
+
+      <label for="Ctrl10"><b>Rango Numerico</b></label>
+      <input type="text" name="Ctrl10" id="Ctrl10" maxlength="2" placeholder="Rango Numerico" arX91="1" arX92="18" arX93="m_err10" arX94="Valor fuera de rango" arX95="Dato Obligatorio." arX96="1" />
+      <b id="m_err10" class="error"></b>
+      <hr>
+
+
+
+      <label for="Ctrl12">Basquetboll</label><input type="checkbox" name="Ctrl12" id="Ctrl12" lbl-sel="Basquetboll Seleccionado" lbl-no-sel="No Seleccionado Basquet" id-lbl-sel="Ctrl12_lbl" />
+      <b><span id="Ctrl12_lbl"></span></b><br>
+
+      <label for="Ctrl13">Fuchiboll</label><input type="checkbox" name="Ctrl13" id="Ctrl13" lbl-sel="Mexico No juega Fuchiboll" lbl-no-sel="No me gusta el Fuchiboll" id-lbl-sel="Ctrl13_lbl" />
+      <b><span id="Ctrl13_lbl"></span></b><br>
+
+      <label for="Ctrl14">Box</label><input type="checkbox" name="Ctrl14" id="Ctrl14" lbl-sel="A darse Chingadazos" lbl-no-sel="No Seleccionado el Box" id-lbl-sel="Ctrl14_lbl" />
+      <b><span id="Ctrl14_lbl"></span></b><br>
+      <hr>
+      
+      
+      <label for="Ctrl15_Dia"><b>Agregar Intervalos (Dias,Meses,A&ntilde;os) a Fecha Actual</b></label>
+      <div class="ui-grid-b">
+        <div class="ui-block-a">
+          <input type="text" name="Ctrl15_Dia" id="Ctrl15_Dia" title="Dias" maxlength="2" placeholder="Dia" />
+        </div>
+        <div class="ui-block-b">
+          <input type="text" name="Ctrl15_Mes" id="Ctrl15_Mes" title="Meses" maxlength="2" placeholder="Mes" />
+        </div>
+        <div class="ui-block-c">
+          <input type="text" name="Ctrl15_Anio" id="Ctrl15_Anio" title="Anios" maxlength="2" placeholder="Anio" />
+        </div>
+      </div>
+      <input type="hidden" id="Ctrl15" name="Ctrl15" dte-intv-id="m_err15" dte-intv-dia="Ctrl15_Dia" dte-intv-mes="Ctrl15_Mes" dte-intv-anio="Ctrl15_Anio" dte-intv-fmt="5" />
+      <b id="m_err15"></b><br><br><br><br>
+      <hr>
+
+      <label for="Ctrl16"><b>Comentario</b></label>
+      <textarea name="Ctrl16" id="Ctrl16" maxlength="200" placeholder="Comentario" kenshi="1" kenshi-2="m_err16" kenshi-3="Dato Obligatorio." kenshi-4="10" kenshi-5="Minimo de Caracteres 10"></textarea>
+      <b id="m_err16" class="error"></b>
+      <hr>
+
+      <label for="Ctrl17"><b>Precio:</b></label>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><input type="text" name="Ctrl17" id="Ctrl17" maxlength="9" placeholder="Precio" fmt-moneda-id-err="m_err17" fmt-moneda="Ctrl17_Moneda" fmt-moneda-ltr="Ctrl17_Escrito"  fmt-moneda-min-val="1" fmt-moneda-max-val="999999999" fmt-moneda-fuera-rang="Fuera de Limite" fmt-moneda-req="Dato Obligatorio." /></div>
+        <div class="ui-block-b"><br>&nbsp;&nbsp;<b id="Ctrl17_Moneda"></b></div>
+      </div>
+      <b id="Ctrl17_Escrito" style="text-transform:capitalize"></b><br>
+      <b id="m_err17" class="error">Dato Obligatorio.</b><br><br>
+      <hr>
+      
+      
+      <div data-role="fieldcontain">
+        <label for="Ctrl18" class="select"><b>Forma de Pago:</b></label>
+        <select name="Ctrl18" id="Ctrl18" data-native-menu="false" lucas="m_err18" lucas1="Dato Obligatorio.">
+          <option value="0">Seleccione ...</option><option value="1">Efectivo</option><option value="2">Cheque</option><option value="3">Tarjeta de cr&eacute;dito</option><option value="4">Tarjeta de d&eacute;bito</option><option value="5">Dinero electr&oacute;nico</option><option value="6">Transferencia electr&oacute;nica</option><option value="7">Vales de despensa</option>
+        </select>
+      </div>
+      <b id="m_err18" class="error"></b>
+      <hr>      
+
+      <label for="Ctrl19"><b>Ingresar Dato</b></label>
+      <input type="text" name="Ctrl19" id="Ctrl19" placeholder="Ingresar Dato" data-Intvan-1="9" data-Intvan-2="0" data-Intvan-5="m_err19" data-Intvan-7="Dato Obligatorio." />
+      <b id="m_err19" class="error"></b><br>
+      <hr>
+      
+      
+      <label for="Ctrl20"><b>Ingresar Dato</b></label>
+      <input type="text" name="Ctrl20" id="Ctrl20" placeholder="Ingresar Dato" data-Intvan-1="6" data-Intvan-2="4" data-Intvan-5="m_err20" data-Intvan-7="Dato Obligatorio." />
+      <b id="m_err20" class="error"></b><br>
+      <hr>
+      
+      
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><label for="chkAceptar">Activame para Guardar Datos</label><input type="checkbox" name="chkAceptar" id="chkAceptar" class="form-check-input" arX31="cmdAceptar" /></div>
+        <div class="ui-block-b"><label for="chkBorrar">Activame para Limpiar el Formulario</label><input type="checkbox" name="chkBorrar" id="chkBorrar" class="form-check-input" data-kung-lao="cmdBorrar" data-kung-lao-1="0" /></div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><input type="button" id="cmdAceptar" data-icon="check" value="Enviar" /></div>
+        <div class="ui-block-b"><input type="button" id="cmdBorrar" data-icon="delete" value="Limpiar" arX21="0" cls-momov="borra-mm" cls-moout="borra-mo" /></div>
+      </div>
+
+      <b id="m_err200"></b><br>
+      <span id="sArFatality" x1="cmdBorrar" x2="" x3="m_err1"></span>
+    </form>
+    <!-- Fin Formulario -->
+
+
+     <hr color="red">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <span id="NotificacionUnica" ar-notif="4" nom-ls="arm2" titulo="Notificacion 1 vez" parrafo="Mensaje" imagen=""></span> 
+
+    <div align="center">
+      <h3>Imagen Aleatoria</h3>
+     <img src="https://xyaizknba.github.io/CatalogoHtml/images/nokia6600_2.jpg" img-rand-url="https://xyaizknba.github.io/CatalogoHtml/images/" img-rand="megamix_1_m.jpg,walkman_1.jpg,hpstream7_1.jpg,cerveza3_m.jpg,pyramix_3_m.jpg,super_nintendo_4_m.jpg,nokia6600_2.jpg" />
+    </div>  
+    <br>
+    <hr>
+
+
+
+    <h3><span sal-dia="Buenos Dias" sal-tar="Buenas Tardes" sal-noc="Buenas Noches"></span>: Este mes Tiene <font style="color:blue"><span max-dias-mes-actual="1"></span></font> Dias y Faltan <font style="color:blue"><span dias-para-terminar-mes="1"></font> Dias para que termine el Mes.</span></h3>
+    <div id="calendario" arX51="" arX52="" arX53="" arX54="diaHoy" arX55="otrosDias" arX56="sMesAnio" arX57="sNomDiaSem" arX58="2" arX59="1" arX510="40%"></div>
+    <hr>
+    <h3>Dias desde la ultima modificacion de esta pagina: <font style="color:#8B0000"><span id="diasDesdeMod" mk="1"></span></font></h3>
+    <hr>
+    <h3>Has visitado esta pagina <font style="color:red"><span visit="1"></span></font> veces desde el Dia <font style="color:#8B0000"><span id="idPrimerAcceso" data-paccess1="dte1Acces" data-paccess2="5" data-paccess3="-"></span></font>.</h3>
+ 	  <span cal-htm-1="diaHoy" cal-htm-2="otrosDias" cal-htm-3="sMesAnio" cal-htm-4="sNomDiaSem" cal-htm-5="40%" cal-htm-6="0" cal-htm-7="2" cal-htm-8="dte1Acces" cal-htm-9="2" cal-htm-0="Jayden" ></span> <div id="Jayden"></div>     
+    <hr>
+    <h3>Faltan <font style="color:blue"><span to-days="1">2026-08-08</span></font> dias para el <font style="color:#8B0000">8 de Agosto de 2026</font> dia de mi cumplea&ntilde;os.</h3>
+    <hr>
+    <h3>La siguiente cantidad escrita --&gt;<font style="color:#8B0000"><span num2let="1">213786.50</span></font> se obtubo con la siguiente etiqueta  --&gt; <font style="color:#8B0000">&lt;span num2let="1"&gt;213786.50&lt;/span&gt;</font></h3>    
+    <hr>
+    <h3>Texto en Ciclo --&gt;<span style="color:blue" id="equiposNBA" txt-cambio="Chicago,Toronto,Sacramento,Denver" txt-cambio-del="," txt-cambio-vel="2"></span></h3> 
+
+    <hr color="red">
+
+
+
+   </div>
+
+
+ <div class="ui-grid-a">
+   <div class="ui-block-a">
+    <a data-ajax="false" href="Bootstrap.htm" data-role="button" data-theme="b" data-icon="back">Bootstrap</a>
+   </div>
+   <div class="ui-block-b">
+    <a data-ajax="false" href="index.htm" data-role="button" data-theme="b" data-icon="home">Inicio</a>
+  </div>
+ </div>
+
+   <div data-role="footer" data-theme="b" data-position="fixed"><h2>Programador : <span id="prgAR">Armando Ramos M.</span></h2></div>
+  </div>
+ </body></html>
