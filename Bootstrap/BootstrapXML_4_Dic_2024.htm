@@ -1,0 +1,524 @@
+<!doctype html><html lang="en"><head><title>Framework Bootstrap</title><style> .tdSubM{background-color:#E0FFFF} .Leng{font-size:x-large} .sTextSubMnu{font-size:large;color:blue} </style>
+<script>
+let aNuk=new Array(0,1,2,3,4,5,6,7,8,9),iNumeroMenus=10,iNumeroSubMenus=5,blnVerUrl=false; if(Ar82("iMenus").length > 0 && Ar82("iSubMenus").length > 0){ iNumeroMenus=Ar83("iMenus") ,iNumeroSubMenus=Ar83("iSubMenus"); } else { iNumeroMenus=Number(window.prompt("Numero Maximo de Menus:","1")) ,iNumeroSubMenus=Number(window.prompt("Numero Maximo de Sub-Menus:","5")); blnVerUrl=true; }
+function Ar3(V){let Y=0,b,c;for(b=0;b<V.length;b++){for(c=0;c<aNuk.length;c++){if(V.substr(b,1)==aNuk[c]){Y++;}}}return Y;}
+function Ar8(S){return(S.length==Ar3(S)?true:false);}
+function Ar82(name){name=name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");let regex=new RegExp("[\\?&]"+name+"=([^&#]*)"),results=regex.exec(location.search);return results === null?"":decodeURIComponent(results[1].replace(/\+/g," "));}
+function Ar83(a){let n=0,x=Ar82(a);if(x.length>0){n=(Ar8(x)?Number(x):0);}return n;}
+function Ar200(i,v){if(i.length>0 && document.getElementById(i)!==null){document.getElementById(i).value=v;}}
+function Ar201(i,v){if(i.length>0 && document.getElementById(i)!==null){document.getElementById(i).innerHTML=v;}}
+function PonerParrafo(iMun,iSub){if(document.getElementById(("tp"+iMun+"_"+iSub)).value.length === 0){Ar200(("tp"+iMun+"_"+iSub), document.getElementById(("tit"+iMun+"_"+iSub)).value);}extArchivo(iMun,iSub);}
+function extArchivo(M,S){
+ let idNomArc="tNomArc"+M+"_"+S,ctrl=document.getElementById(idNomArc),cboID="cboComp"+M+"_"+S,idAyuda="ayuda_"+M+"_"+S;
+ if(document.getElementById(cboID)!==null){
+  Ar201(idAyuda,"");
+  //alert(document.getElementById(cboID).value);
+  switch(Number(document.getElementById(cboID).value)){
+   case 1:{Ar201(idAyuda,"Formulario Login 1");}break;
+   case 2:{Ar201(idAyuda,"Formulario Login 2");}break;
+   case 3:{Ar201(idAyuda,"Formulario Login 3");}break;
+   case 4:{Ar201(idAyuda,"Formulario Login 4");}break;
+   case 5:{Ar201(idAyuda,"Formulario Login 5");}break;
+   case 6:{Ar201(idAyuda,"Formulario Login 6");}break;
+   case 7:{Ar201(idAyuda,"Formulario Login 7");}break;
+   case 8:{Ar201(idAyuda,"Calendario HTML Estatico, Muestra el Mes Actual y Marca el dia Actual");}break;
+   case 9:{Ar201(idAyuda,"Permite Crear 1 PDF, Ingresando Cantidad,Producto y Precio, Realiza las Sumas para el Sub-Total y el Total. * Se PIERDEN LOS DATOS");}break;
+   case 10:{Ar201(idAyuda,"Permite Crear 1 PDF, desde una Tabla HTML Estatica, *NO REALIZA LAS OPERACIONES MATEMATICAS, ERES RESPONSABLE DE HACER LOS CALCULOS");}break;
+   case 11:{Ar201(idAyuda,"Permite Crear 1 PDF, lee un archivo JSON con JavaScript, *LAS OPERACIONES MATEMATICAS TIENEN QUE ESTAR CORRECTAS EN EL JSON");}break;
+   case 12:{Ar201(idAyuda,"Permite Crear 1 PDF, lee un archivo XML con JavaScript, *LAS OPERACIONES MATEMATICAS TIENEN QUE ESTAR CORRECTAS EN EL XML");}break;
+
+   case 13:{Ar201(idAyuda,"Crea 1 Tabla HTML Estatica con 4 Columnas y 10 Renglones, Implementa DataTable y Genera PDF con Los Datos");}break;         
+   case 14:{Ar201(idAyuda,"Crea 1 Tabla HTML Estatica con las Columnas y Renglones que especifiques, Implementa DataTable y Genera PDF con Los Datos");}break;
+   case 15:{Ar201(idAyuda,"Crea 1 Tabla HTML Estatica con 2 Columnas y 10 Renglones para ver Los datos de Forma Horizontal y Genera PDF con Los Datos");}break;
+   case 16:{Ar201(idAyuda,"Crea 1 Tabla HTML Estatica con 2 Columnas y los Renglones que especifiques para ver Los datos de Forma Horizontal y Genera PDF con Los Datos");}break;
+   
+   case 17:{Ar201(idAyuda,"Permite Crear 1 PDF con 2 Columnas y 10 Renglones para ver Los datos de Forma Horizontal");}break;         
+   case 18:{Ar201(idAyuda,"Permite Crear 1 PDF con 2 Columnas y los Renglones que especifiques para ver Los datos de Forma Horizontal");}break;
+   case 19:{Ar201(idAyuda,"Permite Crear 1 PDF con 2 Columnas y 10 Renglones para ver Los datos de Forma Horizontal *Editable la etiqueta y los Datos");}break;
+   case 20:{Ar201(idAyuda,"Permite Crear 1 PDF con 2 Columnas y los Renglones que especifiques para ver Los datos de Forma Horizontal *Editable la etiqueta y los Datos");}break;
+   case 21:{Ar201(idAyuda,"Crea un Carousel Estatico de 10 Imagenes");}break;
+   case 22:{Ar201(idAyuda,"Crea un Carousel Estatico con las Imagenes que especifiques");}break;
+   case 23:{Ar201(idAyuda,"Crea un Accordeon Estatico de 10 elementos");}break;         
+   case 24:{Ar201(idAyuda,"Crea un Accordeon Estatico con los elementos que especifiques");}break;
+   case 25:{Ar201(idAyuda,"Suma 10 Numeros");}break;
+   case 26:{Ar201(idAyuda,"Suma los Numeros Especificados");}break;
+   case 27:{Ar201(idAyuda,"");}break;         
+   case 28:{Ar201(idAyuda,"");}break;
+   case 29:{Ar201(idAyuda,"");}break;
+   case 30:{Ar201(idAyuda,"Alterna 1 parrafo y 1 Imagen 10 Veces (Izquierda - Derecha) o (Derecha - Izquierda) *Estatico");}break;
+   case 31:{Ar201(idAyuda,"Alterna 1 parrafo y 1 Imagen las Veces que especifiques (Izquierda - Derecha) o (Derecha - Izquierda) *Estatico");}break;
+   case 32:{Ar201(idAyuda,"Crea una Tabla con los datos de una Base de Datos , implementa DataTable, Generar PDF y Exportar a .xlsx ");}break;
+   case 33:{Ar201(idAyuda,"Muestra la Tabla en 1 DataTable Genera PDF");}break;         
+   case 34:{Ar201(idAyuda,"");}break;
+   case 35:{Ar201(idAyuda,"Ordena con ajax los registros de una Tabla haciendo click sobre unas Flechas que estan a lado de los nombres de los campos (10 campos)");}break;
+   case 36:{Ar201(idAyuda,"Ordena con ajax los registros de una Tabla haciendo click sobre unas Flechas que estan a lado de los nombres de los campos");}break;
+   case 37:{Ar201(idAyuda,"Ordenamiento de Datos con Ajax usando Flechas alado del nombre del Campo, para 10 campos");}break;         
+   case 38:{Ar201(idAyuda,"Ordenamiento de Datos con Ajax usando Flechas alado del nombre del Campo, para los campos que especifiques");}break;
+   case 39:{Ar201(idAyuda,"");}break;
+   case 40:{Ar201(idAyuda,"Ordena con Ajax los registros de una tabla, mediante controles SELECT HTML al que se le indican el campo de ordenamiento, el orden ASC o DESC y el numero de registros a ver. (10 Campos)");}break;
+   case 41:{Ar201(idAyuda,"Ordena con Ajax los registros de una tabla, mediante controles SELECT HTML al que se le indican el campo de ordenamiento, el orden ASC o DESC y el numero de registros a ver. (Los Campos especificados)");}break;
+   case 42:{Ar201(idAyuda,"Ordena con Ajax los registros de una tabla, mediante controles SELECT HTML al que se le indican el campo de ordenamiento, el orden ASC o DESC y el numero de registros a ver. (10 Campos)");}break;
+   case 43:{Ar201(idAyuda,"Ordena con Ajax los registros de una tabla, mediante controles SELECT HTML al que se le indican el campo de ordenamiento, el orden ASC o DESC y el numero de registros a ver. (Los Campos especificados)");}break;         
+   case 44:{Ar201(idAyuda,"Muetra solo 1 Registro se le pasa por GET querystring el id del registro");}break;
+   case 45:{Ar201(idAyuda,"");}break;
+   case 46:{Ar201(idAyuda,"Lee un JSON mediante Ajax y lo muestra en un DataTable , genera PDF para Todos los Registros y para Registro Individual");}break;
+   case 47:{Ar201(idAyuda,"Lee un XML mediante Ajax y lo muestra en un DataTable , genera PDF para Todos los Registros y para Registro Individual");}break;         
+   case 48:{Ar201(idAyuda,"Crea LocalStorage con una Fecha y un AutoIncrementable para mostrar Tareas o Actividades a Realizar");}break;
+   case 49:{Ar201(idAyuda,"OBSOLETO Lee un XML mediante Ajax y lo muestra en un DataTable, Genera un PDF");}break;
+   case 50:{Ar201(idAyuda,"");}break;
+   case 51:{Ar201(idAyuda,"Se conecta a MySql y por medio de una consulta crear un Accordion");}break;
+   case 52:{Ar201(idAyuda,"Se conecta a una Base de Datos (PDO) y por medio de una consulta crear un Accordion");}break;
+   case 53:{Ar201(idAyuda,"Lee un archivo XML para crear un Accordion");}break;         
+   case 54:{Ar201(idAyuda,"Lee un archivo Json para crear un Accordion");}break;
+   case 55:{Ar201(idAyuda,"Lee un archivo XML con Ajax para crear un Accordion");}break;
+   case 56:{Ar201(idAyuda,"Lee un archivo JSON con Ajax para crear un Accordion");}break;
+   
+   case 57:{Ar201(idAyuda,"Lee un JSON con Ajax para Crear un Grafico de Barras Vertical");}break;         
+   case 58:{Ar201(idAyuda,"Lee un JSON con Ajax para Crear un Grafico de Barras Horizontal");}break;
+   case 59:{Ar201(idAyuda,"Lee un JSON con Ajax para Crear un Grafico de Pastel");}break;
+   case 60:{Ar201(idAyuda,"Lee un JSON con Ajax para Crear un Grafico de Lineas");}break;
+   
+   case 61:{Ar201(idAyuda,"Lee un XML con Ajax para Crear un Grafico de Barras Vertical");}break;
+   case 62:{Ar201(idAyuda,"Lee un XML con Ajax para Crear un Grafico de Barras Horizontal");}break;
+   case 63:{Ar201(idAyuda,"Lee un XML con Ajax para Crear un Grafico de Pastel");}break;         
+   case 64:{Ar201(idAyuda,"Lee un XML con Ajax para Crear un Grafico de Lineas");}break;
+   case 65:{Ar201(idAyuda,"");}break;
+   case 66:{Ar201(idAyuda,"");}break;
+   case 67:{Ar201(idAyuda,"");}break;         
+   case 68:{Ar201(idAyuda,"");}break;
+   case 69:{Ar201(idAyuda,"");}break;
+   case 70:{Ar201(idAyuda,"");}break;
+   case 71:{Ar201(idAyuda,"");}break;
+   case 72:{Ar201(idAyuda,"");}break;
+   case 73:{Ar201(idAyuda,"");}break;         
+   case 74:{Ar201(idAyuda,"");}break;
+   case 75:{Ar201(idAyuda,"");}break;
+   case 76:{Ar201(idAyuda,"");}break;
+   case 77:{Ar201(idAyuda,"");}break;         
+   case 78:{Ar201(idAyuda,"");}break;
+   case 79:{Ar201(idAyuda,"");}break;
+   case 80:{Ar201(idAyuda,"");}break;
+   case 81:{Ar201(idAyuda,"");}break;
+   case 82:{Ar201(idAyuda,"");}break;
+   case 83:{Ar201(idAyuda,"");}break;         
+   case 84:{Ar201(idAyuda,"");}break;
+   case 85:{Ar201(idAyuda,"Lee un JSON con Ajax y muestra los Registros 1x1 de Forma Horizontal, tiene botones para desplazarse entre los registros");}break;
+   case 86:{Ar201(idAyuda,"Lee un XML con Ajax y muestra los Registros 1x1 de Forma Horizontal, tiene botones para desplazarse entre los registros");}break;
+   case 87:{Ar201(idAyuda,"Lee un CSV con Ajax y muestra los Registros 1x1 de Forma Horizontal, tiene botones para desplazarse entre los registros");}break;         
+   case 88:{Ar201(idAyuda,"Crea un XML con una consulta SQL, Lee el XML lo coloca en 1 DataTable, y Genera un xlsx leyendo el XML, genera PDF desde el DataTable <font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 89:{Ar201(idAyuda,"Crea un JSON con una consulta SQL, Lee el JSON lo coloca en 1 DataTable, y Genera un xlsx leyendo el JSON, genera PDF desde el DataTable <font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 90:{Ar201(idAyuda,"OBSOLETO Lee un JSON mediante Ajax y lo muestra en un DataTable ,Genera un PDF");}break;
+   case 91:{Ar201(idAyuda,"OBSOLETO Lee un XML mediante Ajax y lo muestra en un DataTable, Genera un PDF");}break;
+   case 92:{Ar201(idAyuda,"Lee un JSON(Dinamico), Recarga Pagina Tambien los crea, al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font><br><font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 93:{Ar201(idAyuda,"Lee un JSON(Dinamico) Tambien los crea con Ajax al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font>");}break;         
+   case 94:{Ar201(idAyuda,"Lee un XML(Dinamico), Recarga Pagina Tambien los crea, al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font><br><font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 95:{Ar201(idAyuda,"Lee un XML(Dinamico) Tambien los crea con Ajax al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font>");}break;
+   case 96:{Ar201(idAyuda,"Lee un Array JavaScript y lo muestra en un DataTable , genera PDF para Todos los Registros y para Registro Individual");}break;
+   case 97:{Ar201(idAyuda,"Lee un Array JavaScript Bidimensional para crear Graficas Barras Vertical");}break;         
+   case 98:{Ar201(idAyuda,"Lee un Array JavaScript Bidimensional para crear Graficas Barras Horizontal");}break;
+   case 99:{Ar201(idAyuda,"Lee un Array JavaScript Bidimensional para crear Graficas Barras Linea");}break;
+   case 100:{Ar201(idAyuda,"Lee un Array JavaScript Bidimensional para crear Graficas Barras Pastel");}break;
+   case 101:{Ar201(idAyuda,"");}break;
+   case 102:{Ar201(idAyuda,"");}break;
+   case 103:{Ar201(idAyuda,"");}break;         
+   case 104:{Ar201(idAyuda,"");}break;
+   case 105:{Ar201(idAyuda,"Paginacion de Datos, muestra los botones Primer,Siguiente,Anterior y Ultimo; DataTable JS, Imprimir PDF <font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 106:{Ar201(idAyuda,"Paginacion de Datos, solo con 2 Botones (Primer|Anterior y Siguiente|Ultimo, Recarga la pagina cada ves que se ven nuevos datos, NO GENERA PDF");}break;
+   case 107:{Ar201(idAyuda,"Lee un CSV mediante Ajax y lo muestra en un DataTable , genera PDF para Todos los Registros y para Registro Individual");}break;         
+   case 108:{Ar201(idAyuda,"Lee un CSV con PHP y lo muestra en 1 DataTable <font color=\"red\">Ingresa el Numero de Campos</font>");}break;
+   case 109:{Ar201(idAyuda,"SELECT HTML que carga un contenido mediante Ajax, la ruta del archivo a cargar esta defnido en la etiqueta &lt;option&gt;");}break;
+   case 110:{Ar201(idAyuda,"Formulario Vacio, para que a&ntilde;adir controles");}break;
+   case 111:{Ar201(idAyuda,"Calcula el numero de pagos de una Cantidad (Prestamo Monetario)");}break;
+   
+   
+   case 112:{Ar201(idAyuda,"Lee un XML(Dinamico) al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font> y cada registro lo muestra en una Tabla<br>Recarga la Pagina");}break;
+   
+   
+   
+   case 113:{Ar201(idAyuda,"Crea un JSON con una consulta SQL,Lee el JSON genera Tablas de 1 Registro al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font><br>(Recarga Pagina) <font color=\"red\">Ingresa el Numero de Campos</font>");}break;         
+   case 114:{Ar201(idAyuda,"Lee un XML(Dinamico) al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font> y cada registro lo muestra en una Tabla");}break;
+   case 115:{Ar201(idAyuda,"Lee un JSON(Dinamico) al que se le pasan por URL el <font color=\"red\">campo por el que se ordena</font>, si es <font color=\"red\">ASC o Desc</font> y el <font color=\"red\">numero de registros a Ver</font> y cada registro lo muestra en una Tabla");}break;
+   case 116:{Ar201(idAyuda,"Lee 1 Array JavaScript Muilti-Dimension para crear una tabla con DataTable y Generar PDF");}break;
+   case 117:{Ar201(idAyuda,"Lee 1 Array JavaScript Muilti-Dimension para crear tabas de 1 Registro");}break;         
+   case 118:{Ar201(idAyuda,"Muestra las actividades para realizar HOY ( 1 LocalStorage por Actividad )");}break;
+   case 119:{Ar201(idAyuda,"Crea una Base de Datos Local al Navegador (LocalStorage)");}break;
+   case 120:{Ar201(idAyuda,"Lee un Array JavaScript para crear un Accordion");}break;
+   case 121:{Ar201(idAyuda,"Ve una Base de Datos LocalStorage");}break;
+   case 122:{Ar201(idAyuda,"Crud con LocalStorage y Generacion de PDF");}break;
+   case 123:{Ar201(idAyuda,"");}break;         
+   case 124:{Ar201(idAyuda,"");}break;
+   case 125:{Ar201(idAyuda,"");}break;
+   case 126:{Ar201(idAyuda,"");}break;
+   case 127:{Ar201(idAyuda,"");}break;         
+   case 128:{Ar201(idAyuda,"");}break;
+   case 129:{Ar201(idAyuda,"");}break;
+   
+  }
+ }
+ if(ctrl.value.indexOf(".") == -1){ctrl.value+=("." + document.getElementById("extArc").value);}
+}
+
+function Componente(M,S){
+ let s="<select id=\"cboComp"+M+"_"+S+"\" onchange=\"extArchivo("+M+","+S+")\">";
+   s+="<option value=\"0\">Selecciona ..</option>";
+
+
+
+
+
+
+  // 
+   //Pendientes s+="<option value=\"27\">FrmContacto1</option><option value=\"28\">FrmContacto2</option><option value=\"29\">FrmContacto3</option>";  
+   
+   s+="<option value=\"110\">Formulario Vacio (para agregar controles)</option>";
+
+   s+="<option value=\"1\">FrmLogin1</option><option value=\"2\">FrmLogin2</option><option value=\"3\">FrmLogin3</option><option value=\"4\">FrmLogin4</option><option value=\"5\">FrmLogin5</option><option value=\"6\">FrmLogin6</option><option value=\"7\">FrmLogin7</option>";
+   s+="<option value=\"46\">Lee un JSON con Ajax,lo muestra en un DataTable,imprime un PDF con Todos los Datos y (PDF y TXT) registro Individial</option>";
+   s+="<option value=\"47\">Lee un XML con Ajax,lo muestra en un DataTable,imprime un PDF con Todos los Datos y (PDF y TXT) registro Individial</option>";
+   s+="<option value=\"107\">Lee un CSV con Ajax,lo muestra en un DataTable,imprime un PDF con Todos los Datos y (PDF y TXT) registro Individial</option>";
+   s+="<option value=\"96\">Lee un Array JavaScript,lo muestra en un DataTable,imprime un PDF con Todos los Datos y (PDF y TXT) registro Individial</option>";  
+
+   s+="<option value=\"85\">RecorrerDatosJson (Botones: Primer,Siguiente,Anterior,Ultimo)</option>";
+   s+="<option value=\"86\">RecorrerDatosXml (Botones: Primer,Siguiente,Anterior,Ultimo)</option>";
+   s+="<option value=\"87\">RecorrerDatosCsv (Botones: Primer,Siguiente,Anterior,Ultimo)</option>";
+   s+="<option value=\"8\">ArmCalendario</option>"; 
+
+   s+="<option value=\"9\">Factura1</option><option value=\"10\">Factura2</option><option value=\"11\">FacturaJson</option><option value=\"12\">FacturaXml</option>";
+
+   s+="<option value=\"13\">TableHtml  --HTML Estatico--</option>";
+   s+="<option value=\"14\">TableHtml-iRenglones-iColumnas  --HTML Estatico--</option>";
+   s+="<option value=\"15\">TableHtmlRegistro  --HTML Estatico--</option>";
+   s+="<option value=\"16\">TableHtmlRegistro-iCampos  --HTML Estatico--</option>";
+   s+="<option value=\"17\">CapturaPdf1</option>";
+   s+="<option value=\"18\">CapturaPdf1-iCampos</option>";
+   s+="<option value=\"19\">CapturaPdf2</option>";
+   s+="<option value=\"20\">CapturaPdf2-iCampos</option>";
+   s+="<option value=\"21\">Carousel</option><option value=\"22\">Carousel-iMages</option>";
+   s+="<option value=\"23\">Accordion</option><option value=\"24\">Accordion-iParrafos</option>"; 
+   s+="<option value=\"55\">Accordion JavaScript (Ajax) Xml</option><option value=\"56\">Accordion JavaScript (Ajax) Json</option><option value=\"120\">AccordionArray Array JavaScript</option>";  
+   s+="<option value=\"25\">SumaCantidades</option>";
+   s+="<option value=\"26\">SumaCantidades-iNumeros</option>"; 
+   s+="<option value=\"30\">ImagenParrafoAlt</option><option value=\"31\">ImagenParrafoAlt-iNumImg</option>";
+
+   s+="<option value=\"97\">GraficaBarrasVerticalArrayJs</option>";
+   s+="<option value=\"98\">GraficaBarrasHorizontalArrayJs</option>";
+   s+="<option value=\"99\">GraficaLineaArrayJs</option>";
+   s+="<option value=\"100\">GraficaPastelArrayJs</option>";
+   s+="<option value=\"57\">GraficaBarrasVerticalJson</option>";
+   s+="<option value=\"58\">GraficaBarrasHorizontalJson</option>";
+   s+="<option value=\"59\">GraficaPastelJson</option>";
+   s+="<option value=\"60\">GraficaLineaJson</option>"; 
+
+   s+="<option value=\"61\">GraficaBarrasVerticalXml</option>";
+   s+="<option value=\"62\">GraficaBarrasHorizontalXml</option>";
+   s+="<option value=\"63\">GraficaPastelXml</option>";
+   s+="<option value=\"64\">GraficaLineaXml</option>"; 
+
+   s+="<option value=\"111\">PestamoMonetario</option>";
+   s+="<option value=\"118\">TareasHoy</option>";
+   s+="<option value=\"48\">EstablecerTareas</option>";
+   
+   s+="<option value=\"119\">BaseDatosLocalStorage1</option>";  
+   s+="<option value=\"121\">VerBaseDatosLS Ve una Base de Datos LocalStorage</option>";   
+   s+="<option value=\"122\">Crud con LocalStorage y Generacion de PDF</option>";
+
+   s+="<option value=\"116\">DataTableArrayJsMuitidimension (Lee 1 Array JavaScript Muilti-Dimension)</option>";   
+   s+="<option value=\"117\">Tablas1RegArrayJsMuitidimension (Lee 1 Array JavaScript Muilti-Dimension)</option>";  
+   s+="<option value=\"109\">SelHtmlCargaAjax-iNumOptSelect  (Carga un Archivo via Ajax segun la opcion del control HTML Select) </option>";
+
+   s+="<option value=\"114\">AjaxXmlTbls1Reg (Lee un XML mediante Ajax y cada registro lo muestra en una Tabla)</option>";
+   s+="<option value=\"95\">XmlPhpOrdSelAjax  (Lee un XML con Ajax ,ordenamiento de Informacion)</option>";   
+   
+   s+="<option value=\"115\">AjaxJsonTbls1Reg (Lee un Json mediante Ajax y cada registro lo muestra en una Tabla)</option>";
+   s+="<option value=\"93\">JsonPhpOrdSelAjax  (Lee un JSON con Ajax ,ordenamiento de Informacion)</option>"; 
+
+   s+="<option value=\"-1\"><b class=\"Leng\">---------------  PHP  ---------------</b></option>"; 
+   s+="<option value=\"32\">TablaDatosPhp-iNumCampos (La Tabla Mas Simple), genera el PHP para generar el .xlsx</option>";
+   s+="<option value=\"44\">PhpVer1Registro-iNumCampos (La Tabla Mas Simple)</option>";
+   s+="<option value=\"35\">PhpOrdFlecha</option>";
+   s+="<option value=\"36\">PhpOrdFlecha-iNumCampos</option>";   
+   s+="<option value=\"113\">JsonPhpOrdSelTbls1Reg- (Lee un Json con PHP ,ordenamiento de Informacion) 1 tabla x Registro</option>";
+   s+="<option value=\"112\">XmlPhpOrdSelTbls1Reg- (Lee un XML con PHP ,ordenamiento de Informacion) 1 tabla x Registro</option>";
+   
+   s+="<option value=\"105\">PaginacionPhpMySql-iNumCampos   (Paginacion de Datos) ok</option>";   
+   s+="<option value=\"88\">TablaXmlPhp-iNumCampos (Crea 3 archivos XML, Leer XML y Generar xlsx desde el XML)</option>";
+   s+="<option value=\"89\">TablaJsonPhp-iNumCampos (Crea 3 archivos JSON, Leer JSON y Generar xlsx desde el JSON)</option>";    
+   s+="<option value=\"108\">TablaCsvPhp-iNumCampos  (Lee un CSV con PHP y lo muestra en 1 DataTable), *Agregar generacion xlsx</option>";
+
+   s+="<option value=\"40\">PhpOrdSelect</option>";
+   s+="<option value=\"41\">PhpOrdSelect-iNumCampos</option>";
+   
+   s+="<option value=\"92\">JsonPhpOrdSel (Crea 2 Archivos,Lee un JSON con PHP ,ordenamiento de Informacion Recarga la Pagina) No genera pdf</option>";
+   s+="<option value=\"93\">JsonPhpOrdSelAjax (Crea 2 Archivos, Lee un JSON con Ajax ,ordenamiento de Informacion)  No genera pdf</option>";
+   s+="<option value=\"94\">XmlPhpOrdSel (Crea 2 Archivos, Lee un XML con PHP ,ordenamiento de Informacion Recarga la Pagina) No genera pdf</option>";
+   s+="<option value=\"95\">XmlPhpOrdSelAjax (Crea 2 Archivos, Lee un XML con Ajax ,ordenamiento de Informacion)  No genera pdf</option>";   
+
+   s+="<option value=\"51\">Accordion Php MySql</option>";
+   s+="<option value=\"52\">Accordion Php Pdo</option>";
+   s+="<option value=\"53\">Accordion Php Xml</option>";
+   s+="<option value=\"54\">Accordion Php Json</option>";
+
+   s+="<option value=\"65\">GraficaBarrasVerticalPhpPdo</option>";
+   s+="<option value=\"66\">GraficaBarrasHorizontalPhpPdo</option>";
+   s+="<option value=\"67\">GraficaPastelPhpPdo</option>";
+   s+="<option value=\"68\">GraficaLineaPhpPdo</option>"; 
+   
+   s+="<option value=\"69\">GraficaBarrasVerticalPhpMySql</option>";
+   s+="<option value=\"70\">GraficaBarrasHorizontalPhpMySql</option>";
+   s+="<option value=\"71\">GraficaPastelPhpMySql</option>";
+   s+="<option value=\"72\">GraficaLineaPhpMySql</option>";    
+
+
+
+
+
+   
+
+
+
+   s+="<option value=\"-2\"><b class=\"Leng\">---------------  JSTL  ---------------</b></option>";
+   s+="<option value=\"106\">PaginacionJstl-iNumCampos --OK--</option>";
+   s+="<option value=\"33\">TablaDatosJstl-iNumCampos --OK--</option>";
+   s+="<option value=\"37\">JstlOrdFlecha --OK--</option>";
+   s+="<option value=\"38\">JstlOrdFlecha-iNumCampos --OK--</option>";
+   s+="<option value=\"42\">JstlOrdSelect --OK--</option>";
+   s+="<option value=\"43\">JstlOrdSelect-iNumCampos --OK--</option>";
+   s+="<option value=\"45\">JstlVer1Registro-iNumCampos</option>";
+   s+="<option value=\"50\">Accordion JSTL Sql</option>";   
+   
+   s+="<option value=\"73\">GraficaBarrasVerticalJstl</option>";
+   s+="<option value=\"74\">GraficaBarrasHorizontalJstl</option>";
+   s+="<option value=\"75\">GraficaPastelJstl</option>";
+   s+="<option value=\"76\">GraficaLineaJstl</option>";   
+   
+   s+="<option value=\"101\">TablaXmlJsp-iNumCampos</option>";   
+   s+="<option value=\"102\">XmlJspOrdSel-iNumCampos</option>";   
+   s+="<option value=\"103\">JsonJspOrdSel-iNumCampos</option>";   
+   s+="<option value=\"104\">TablaJsonJsp-iNumCampos</option>";   
+   
+   s+="<option value=\"-3\"><b class=\"Leng\">---------------  NodeJs  ---------------</b></option>";
+   s+="<option value=\"34\">TablaDatosNode-iNumCampos-sNomArcSinExte</option>";
+   s+="<option value=\"39\">NodeOrdFlecha-iNumCampos-sNomArcSinExte</option>";
+   s+="<option value=\"-4\"><b class=\"Leng\">---------------  Graficas  ---------------</b></option>";
+
+
+   s+="<option value=\"77\">GraficaBarrasVerticalJdbc</option>";
+   s+="<option value=\"78\">GraficaBarrasHorizontalJdbc</option>";
+   s+="<option value=\"79\">GraficaPastelJdbc</option>";
+   s+="<option value=\"80\">GraficaLineaJdbc</option>";
+   
+   s+="<option value=\"81\">GraficaBarrasVerticalJsp</option>";
+   s+="<option value=\"82\">GraficaBarrasHorizontalJsp</option>";
+   s+="<option value=\"83\">GraficaPastelJsp</option>";
+   s+="<option value=\"84\">GraficaLineaJsp</option>";
+   
+   
+   
+   
+
+   s+="<option value=\"49\">Eliminado</option>";
+   s+="<option value=\"90\">Eliminado</option>";
+   s+="<option value=\"91\">Eliminado</option>";   
+
+
+
+   
+
+   
+   
+ s+="</select>";
+ return s;
+}
+function cmdGenerar_onClick(){
+ let sMnu,sSubM,sSubT,sSubP,sCboId,sP1,sP2,s="";
+ s+="<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<Estaticas>\n";
+ s+="  <Menu><Etiqueta>"+document.getElementById("txtInicio").value+"</Etiqueta></Menu>\n";
+ for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){sMnu="txtMnu"+iMnuX;if(document.getElementById(sMnu).value.length>0){s+="  <Menu><Etiqueta>"+document.getElementById(sMnu).value+"</Etiqueta></Menu>\n";}}
+ for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){
+  sMnu = "txtMnu" + iMnuX;
+  if(document.getElementById(sMnu).value.length>0){
+    s+="  <SubMenus>\n";
+    for(let iTbl=1;iTbl<=iNumeroSubMenus;iTbl++){
+     sSubM="tNomArc"+iMnuX+"_"+iTbl;
+     sSubT="tit"+iMnuX+"_"+iTbl;
+     sSubP="tp"+iMnuX+"_"+iTbl;
+     sCboId="cboComp"+iMnuX+"_"+iTbl;
+     sP1="tPa1_"+iMnuX+"_"+iTbl;
+     sP2="tPa2_"+iMnuX+"_"+iTbl;
+     if(document.getElementById(sSubM).value.length>0){
+        s+="    <SubMenu>\n";
+        s+="      <TituloHtm>"+document.getElementById(sSubT).value+"</TituloHtm>\n";
+        s+="      <Parrafo1>"+document.getElementById(sSubP).value+"</Parrafo1>\n";
+        s+="      <Componente>"+TipoComponente(document.getElementById(sCboId).value, document.getElementById(sP1).value, document.getElementById(sP2).value  )+"</Componente>\n";
+        s+="      <NombreArchivo>"+document.getElementById(sSubM).value+"</NombreArchivo>\n";
+        s+="    </SubMenu>\n";
+     }
+    }
+    s+="  </SubMenus>\n";
+  }
+ }
+ s+="</Estaticas>\n"; 
+ Ar200("txtCodigo",s);
+ document.frm.txtCodigo.select(); document.execCommand("copy");
+}
+function TipoComponente(iTiCom,iRen,iCol){
+ let s="";
+ switch(Number(iTiCom)){
+  case 0:{s="";}break;
+  case 1:{s="FrmLogin1";}break;
+  case 2:{s="FrmLogin2";}break;
+  case 3:{s="FrmLogin3";}break;
+  case 4:{s="FrmLogin4";}break;
+  case 5:{s="FrmLogin5";}break;
+  case 6:{s="FrmLogin6";}break;
+  case 7:{s="FrmLogin7";}break;
+  case 8:{s="ArmCalendario";}break;
+  case 9:{s="Factura1";}break;
+  case 10:{s="Factura2";}break;
+  case 11:{s="FacturaJson";}break;
+  case 12:{s="FacturaXml";}break;
+  case 13:{s="TableHtml";}break;
+  case 14:{s="TableHtml-"+iRen+"-"+iCol;}break;
+  case 15:{s="TableHtmlRegistro";}break;
+  case 16:{s="TableHtmlRegistro-"+iRen;}break;
+  case 17:{s="CapturaPdf1";}break;
+  case 18:{s="CapturaPdf1-"+iRen;}break;
+  case 19:{s="CapturaPdf2";}break;
+  case 20:{s="CapturaPdf2-"+iRen;}break;
+  case 21:{s="Carousel";}break;
+  case 22:{s="Carousel-"+iRen;}break;
+  case 23:{s="Accordion";}break;
+  case 24:{s="Accordion-"+iRen;}break;
+  case 25:{s="SumaCantidades";}break;
+  case 26:{s="SumaCantidades-"+iRen;}break;
+  case 27:{s="FrmContacto1";}break;
+  case 28:{s="FrmContacto2";}break;
+  case 29:{s="FrmContacto3";}break;
+  case 30:{s="ImagenParrafoAlt";}break;
+  case 31:{s="ImagenParrafoAlt-"+iRen;}break;
+  case 32:{s="TablaDatosPhp-"+iRen;}break;
+  case 33:{s="TablaDatosJstl-"+iRen;}break;
+  case 34:{s="TablaDatosNode-"+iRen+"-"+iCol;}break;
+  case 35:{s="PhpOrdFlecha";}break;
+  case 36:{s="PhpOrdFlecha-"+iRen;}break;
+  case 37:{s="JstlOrdFlecha";}break;
+  case 38:{s="JstlOrdFlecha-"+iRen;}break;
+  case 39:{s="NodeOrdFlecha-"+iRen+"-"+iCol;;}break;
+  case 40:{s="PhpOrdSelect";}break;
+  case 41:{s="PhpOrdSelect-"+iRen;}break;
+  case 42:{s="JstlOrdSelect";}break;
+  case 43:{s="JstlOrdSelect-"+iRen;}break;
+  case 44:{s="PhpVer1Registro-"+iRen;}break;
+  case 45:{s="JstlVer1Registro-"+iRen;}break;
+  case 46:{s="Pdf1RegJson-"+iRen;}break;
+  case 47:{s="Pdf1RegXml-"+iRen;}break;
+  
+  case 48:{s="EstablecerTareas";}break;
+  case 49:{s="";}break;
+  case 50:{s="JstlAccordionSql";}break;
+  case 51:{s="PhpAccordionMySql";}break;
+  case 52:{s="PhpAccordionPdo";}break;
+  case 53:{s="PhpAccordionXml";}break;
+  case 54:{s="PhpAccordionJson";}break;
+  case 55:{s="JsAccordionXml";}break;
+  case 56:{s="JsAccordionJson";}break;
+  case 57:{s="GraficaBarrasVerticalJson";}break;
+  case 58:{s="GraficaBarrasHorizontalJson";}break;
+  case 59:{s="GraficaPastelJson";}break;
+  case 60:{s="GraficaLineaJson";}break;
+  
+  case 61:{s="GraficaBarrasVerticalXml";}break;
+  case 62:{s="GraficaBarrasHorizontalXml";}break;
+  case 63:{s="GraficaPastelXml";}break;
+  case 64:{s="GraficaLineaXml";}break;
+
+  case 65:{s="GraficaBarrasVerticalPhpPdo";}break;
+  case 66:{s="GraficaBarrasHorizontalPhpPdo";}break;
+  case 67:{s="GraficaPastelPhpPdo";}break;
+  case 68:{s="GraficaLineaPhpPdo";}break;
+  case 69:{s="GraficaBarrasVerticalPhpMySql";}break;
+  case 70:{s="GraficaBarrasHorizontalPhpMySql";}break;
+  case 71:{s="GraficaPastelPhpMySql";}break;
+  case 72:{s="GraficaLineaPhpMySql";}break;
+  case 73:{s="GraficaBarrasVerticalJstl";}break;
+  case 74:{s="GraficaBarrasHorizontalJstl";}break;
+  case 75:{s="GraficaPastelJstl";}break;
+  case 76:{s="GraficaLineaJstl";}break;
+  case 77:{s="GraficaBarrasVerticalJdbc";}break;
+  case 78:{s="GraficaBarrasHorizontalJdbc";}break;
+  case 79:{s="GraficaPastelJdbc";}break;
+  case 80:{s="GraficaLineaJdbc";}break;    
+  case 81:{s="GraficaBarrasVerticalJsp";}break;
+  case 82:{s="GraficaBarrasHorizontalJsp";}break;
+  case 83:{s="GraficaPastelJsp";}break;
+  case 84:{s="GraficaLineaJsp";}break;
+  
+  case 85:{s="RecorrerDatosJson";}break;
+  case 86:{s="RecorrerDatosXml";}break;
+  case 87:{s="RecorrerDatosCsv";}break;
+   
+  case 88:{s="TablaXmlPhp-"+iRen;}break; 
+  case 89:{s="TablaJsonPhp-"+iRen;}break; 
+  case 90:{s="";}break; 
+  case 91:{s="";}break; 
+  
+  case 92:{s="JsonPhpOrdSel-"+iRen;}break; 
+  case 93:{s="JsonPhpOrdSelAjax-"+iRen;}break;  
+  case 94:{s="XmlPhpOrdSel-"+iRen;}break;
+  case 95:{s="XmlPhpOrdSelAjax-"+iRen;}break;  
+  
+  case 96:{s="LeerArrayDatosJs-"+iRen;}break;
+  
+  case 97:{s="GraficaBarrasVerticalArrayJs";}break;
+  case 98:{s="GraficaBarrasHorizontalArrayJs";}break;
+  case 99:{s="GraficaLineaArrayJs";}break;
+  case 100:{s="GraficaPastelArrayJs";}break;
+  case 101:{s="TablaXmlJsp-"+iRen;}break;
+  case 102:{s="XmlJspOrdSel-"+iRen;}break;
+  case 103:{s="JsonJspOrdSel-"+iRen;}break;
+  case 104:{s="TablaJsonJsp-"+iRen;}break;
+  case 105:{s="PaginacionPhpMySql-"+iRen;}break;
+  case 106:{s="PaginacionJstl-"+iRen;}break;
+  case 107:{s="Pdf1RegCsv-"+iRen;}break;
+  case 108:{s="TablaCsvPhp-"+iRen;}break;  
+  case 109:{s="SelHtmlCargaAjax-"+iRen;}break;  
+  
+  case 110:{s="Formulario";}break;
+  case 111:{s="PestamoMonetario";}break;
+  case 112:{s="XmlPhpOrdSelTbls1Reg-"+iRen;}break;
+  case 113:{s="JsonPhpOrdSelTbls1Reg-"+iRen;}break;  
+  case 114:{s="AjaxXmlTbls1Reg";}break;
+  case 115:{s="AjaxJsonTbls1Reg";}break;
+  
+  case 116:{s="DataTableArrayJsMuitidimension";}break;
+  case 117:{s="Tablas1RegArrayJsMuitidimension";}break;
+  case 118:{s="TareasHoy";}break;
+  case 119:{s="BaseDatosLocalStorage1";}break;
+  case 120:{s="AcordionArray";}break;
+  case 121:{s="VerBaseDatosLS";}break;
+  case 122:{s="CrudLocalStorage";}break;
+  
+ }
+ return s;
+}
+
+
+</script></head><body bgcolor="#DCDCDC"><div align="center" id="Codigo"></div><h1 align="center">Programador: Armando Ramos</h1>
+<script>
+let sCod="";
+if(blnVerUrl){ sCod+="<p>Indica el Numero Maximo de Menus y el Numero Maximo de Submenus agrega los siguientes parametros a la URL:</p><h2><a href=\""+location.href+"?iMenus=1&iSubMenus=5\">?iMenus=<font color=\"red\">1</font>&iSubMenus=<font color=\"red\">5</font></a></h2>"; }
+sCod+="<form name=\"frm\"><table>\n";
+sCod+="<tr><td>Texto para la Pagina de Inicio index: <input type=\"text\" id=\"txtInicio\" value=\"Inicio\" size=\"20\"> Extension de los Archivos <input type=\"text\" id=\"extArc\" size=\"4\" maxlength=\"4\" value=\"jsp\"></td></tr>\n";
+for(let iMnuX=1;iMnuX <= iNumeroMenus; iMnuX++){
+ sCod+="<tr align=\"center\"><th bgcolor=\"#ADD8E6\"><h1>Texto Menu "+iMnuX+":<input type=\"text\" id=\"txtMnu"+iMnuX+"\" size=\"30\" value=\""+(iMnuX===1?"Prueba":"")+"\"></h1></th></tr>\n";
+ for(let iTbl=1;iTbl<=iNumeroSubMenus;iTbl++){
+  sCod+="<tr align=\"center\" class=\"tdSubM\"><td class=\"sTextSubMnu\">SubMenu: "+ iTbl +" del Menu: "+iMnuX+"</td></tr>";
+  sCod+="<tr class=\"tdSubM\"><td>Nombre Archivo:<input type=\"text\" size=\"20\" id=\"tNomArc"+iMnuX+"_"+iTbl+"\"> Titulo HTM:<input type=\"text\" size=\"20\" id=\"tit"+iMnuX+"_"+iTbl+"\" onblur=\"PonerParrafo("+iMnuX+","+iTbl+")\"> Parrafo :<input type=\"text\" size=\"20\" id=\"tp"+iMnuX+"_"+iTbl+"\"></td></tr>";
+  sCod+="<tr class=\"tdSubM\"><td>Componente: "+Componente(iMnuX,iTbl)+" Parametro 1:<input type=\"text\" id=\"tPa1_"+iMnuX+"_"+iTbl+"\"> Parametro 2:<input type=\"text\" id=\"tPa2_"+iMnuX+"_"+iTbl+"\"></td></tr>";
+  sCod+="<tr align=\"center\" class=\"tdSubM\"><td><b id=\"ayuda_"+iMnuX+"_"+iTbl+"\"></b></td></tr>";
+  sCod+="<tr><td><br></td></tr>";
+ }
+}
+sCod+="<tr align=\"center\"><td><input type=\"button\" value=\"Generar\" onclick=\"cmdGenerar_onClick()\"></td></tr><tr align=\"center\"><td><textarea rows=\"20\" cols=\"120\" id=\"txtCodigo\" name=\"txtCodigo\"></textarea></td></tr>\n</table></form>";
+Ar201("Codigo",sCod);
+</script></body></html>
